@@ -4,9 +4,18 @@ title:  Proposal
 ---
 
 ## Summary of the Project (30 points)
-In a paragraph or so, mention the main idea behind your project. At the very least, you should have a sentence
-that clearly explains the input/output semantics of your project, i.e. what information will it take as input, and
-what will it produce. Mention any applications, if any, for your project.
+The aim of our project is to participate in the Collaborative AI Challenge. We will implement and train an agent that can collaborate with any collaborator to try to capture the pig in the "Pig Chase" challenge.
+
+##### Overview of the game:
+Two Minecraft agents and a pig are wandering a small meadow. The agents have two choices:
+  * Catch the pig (i.e., the agents pinch or corner the pig, and no escape path is available), and receive a high reward (25 points)
+  * Give up and leave the pig pen through the exits to the left and right of the pen, marked by blue squares, and receive a small reward (5 points)
+
+#### How to play
+  * The game is played over 10 rounds at a time. Goal is to accumulate the highest score over these 10 rounds.
+  * In each round a "collaborator" agent is selected to play with you. Different collaborators may have different behaviors.
+  * Once the game has started, use the left/right arrow keys to turn, and the forward/backward keys to move. You can see your agent move in the first person view, and shown as a red arrow in the top-down rendering on the left.
+  * You and your collaborator move in turns and try to catch the pig (25 points if caught). You can give up on catching the pig in the current round by moving to the blue "exit squares" (5 points). You have a maximum of 25 steps available, and will get -1 point for each step taken.
 
 ## AI/ML Algorithms (10 points)
 In a single sentence, mention the AI and ML algorithm(s) you anticipate using for your project.  It does not
