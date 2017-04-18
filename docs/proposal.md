@@ -6,7 +6,7 @@ title:  Proposal
 ## Summary of the Project (30 points)
 The aim of our project is to participate in the Collaborative AI Challenge. We will implement and train an agent that can collaborate with any collaborator to try to capture the pig in the "Pig Chase" challenge.
 
-##### Overview of the game:
+#### Overview of the game:
 Two Minecraft agents and a pig are wandering a small meadow. The agents have two choices:
   * Catch the pig (i.e., the agents pinch or corner the pig, and no escape path is available), and receive a high reward (25 points)
   * Give up and leave the pig pen through the exits to the left and right of the pen, marked by blue squares, and receive a small reward (5 points)
