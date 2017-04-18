@@ -1,16 +1,16 @@
 ---
 layout: default
-title:  Team
+title:  Ex Minecraft
 ---
 
 # {{ page.title }}
 
 
-## USER 1
-***UCI Net ID***: ucinetid
+## Amanda Marie Ortscheid
+***UCI Net ID***: aortsche(?)
 
-## USER 2
-***UCI Net ID***: ucinetid
+## Hector G. Flores Rodriguez
+***UCI Net ID***: hfloresr
 
-## USER 3
-***UCI Net ID***: ucinetid
+## Malav Pandya
+***UCI Net ID***: mpanday(?)
