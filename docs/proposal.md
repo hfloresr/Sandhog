@@ -21,7 +21,7 @@ Two Minecraft agents and a pig are wandering a small meadow. The agents have two
 We plan on using reinforcement learning for our algorithm.
 
 ## Evaluation Plan
-For evaluating our algorithm we plan on comparing the total reward gained in ten rounds for the Pig Chase challenge. We also plan on using the the total reward our agent recieves with respect to the number of steps it takes for tracking the progress of our learner. The data that will be used are the statistics that are logged on the malmo-challenge script provided. TensorBoard will be used for visualizing and debugging our learner. Furthermore will be using the A-star agent as our baseline.
+For evaluating our algorithm we plan on comparing the total reward gained in ten rounds for the Pig Chase challenge. We also plan on using the the total reward our agent recieves with respect to the number of steps it takes for tracking the progress of our learner. The data that will be used are the statistics that are logged on the malmo-challenge script provided. TensorBoard we will be used for visualizing and debugging our learner. Furthermore will be using the A-star agent as our baseline.
 
 
 ## Appointment with the Instructor
