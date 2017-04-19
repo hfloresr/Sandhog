@@ -30,7 +30,4 @@ you get there. Note that these are not promises, we’re not going to hold you t
 see if you are able to think about evaluation of your project in a critical manner.
 
 ## Appointment with the Instructor (15 points)
-One member of the group should take an appointment with the instructor in the week starting 4/23 (or 4/30, if
-no slots are available). Select a time such that all members of the group can attend, unless one or more members
-of your group can absolutely not make any of the available times. In the proposal page, mention the date and time
-you have reserved the appointment for.
+01:45pm - Tuesday, April 25, 2017
