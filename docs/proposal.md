@@ -3,7 +3,7 @@ layout: default
 title:  Proposal
 ---
 
-## Summary of the Project (30 points)
+## Summary of the Project
 The aim of our project is to participate in the Collaborative AI Challenge. We will implement and train an agent that can collaborate with any collaborator to try to capture the pig in the "Pig Chase" challenge.
 
 #### Overview of the game:
@@ -17,11 +17,11 @@ Two Minecraft agents and a pig are wandering a small meadow. The agents have two
   * Once the game has started, use the left/right arrow keys to turn, and the forward/backward keys to move. You can see your agent move in the first person view, and shown as a red arrow in the top-down rendering on the left.
   * You and your collaborator move in turns and try to catch the pig (25 points if caught). You can give up on catching the pig in the current round by moving to the blue "exit squares" (5 points). You have a maximum of 25 steps available, and will get -1 point for each step taken.
 
-## AI/ML Algorithms (10 points)
+## AI/ML Algorithms
 We plan on using reinforcement learning for our algorithm.
 
 ## Evaluation Plan
-For evaluating our algorithm we plan on comparing the total reward with respect to the number of rounds in the Pig Chase. We also plan on using the the total reward our agent recieves with respect to the number of steps it takes for visualizing the progress of our learner. The data that will be used are the statistics that are logged on the malmo-challenge script provided. TensorBoard will be used for visualizing and debugging our learner. Furthermore will be using the A-star agent as our baseline.
+For evaluating our algorithm we plan on comparing the total reward gained in ten rounds for the Pig Chase challenge. We also plan on using the the total reward our agent recieves with respect to the number of steps it takes for tracking the progress of our learner. The data that will be used are the statistics that are logged on the malmo-challenge script provided. TensorBoard will be used for visualizing and debugging our learner. Furthermore will be using the A-star agent as our baseline.
 
 
 ## Appointment with the Instructor (15 points)
