@@ -20,6 +20,7 @@ Two Minecraft agents and a pig are wandering a small meadow. The agents have two
 ## AI/ML Algorithms (10 points)
 We plan on using reinforcement learning for our algorithm.
 
+<<<<<<< dd9b68b5e3296734b423e094a95d84794a0534cd
 ## Evaluation Plan (30 points)
 As described in class, mention how you will evaluate the success of your project. In a paragraph, focus on the
 quantitative evaluation: what are the metrics, what are the baselines, how much you expect your approach to
@@ -28,6 +29,11 @@ you will show to verify the project works, such as what are the sanity cases for
 the internals of the algorithm to verify it works, what’s your moonshot case, i.e. it’ll be awesome and impressive if
 you get there. Note that these are not promises, we’re not going to hold you to what you say here, but we want to
 see if you are able to think about evaluation of your project in a critical manner.
+=======
+## Evaluation Plan
+For evaluating our algorithm we plan on comparing the total reward with respect to the number of rounds in the Pig Chase. We also plan on using the the total reward our agent recieves with respect to the number of steps it takes for visualizing the progress of our learner. The data that will be used are the statistics that are logged on the malmo-challenge script provided. TensorBoard will be used for visualizing and debugging our learner. Furthermore will be using the A-star agent as our baseline.
+
+>>>>>>> updated evaluation plan
 
 ## Appointment with the Instructor (15 points)
 01:45pm - Tuesday, April 25, 2017
