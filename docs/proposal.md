@@ -18,7 +18,7 @@ Two Minecraft agents and a pig are wandering a small meadow. The agents have two
   * You and your collaborator move in turns and try to catch the pig (25 points if caught). You can give up on catching the pig in the current round by moving to the blue "exit squares" (5 points). You have a maximum of 25 steps available, and will get -1 point for each step taken.
 
 ## AI/ML Algorithms (10 points)
-We plan on using reinforcement learning for your algorithm.
+We plan on using reinforcement learning for our algorithm.
 
 ## Evaluation Plan (30 points)
 As described in class, mention how you will evaluate the success of your project. In a paragraph, focus on the
