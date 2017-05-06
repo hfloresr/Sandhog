@@ -1,4 +1,4 @@
-name: sandhog
+name: Sandhog
 dependencies:
   - python=2
   - anaconda
