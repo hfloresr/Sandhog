@@ -6,15 +6,25 @@
 import numpy as np
 
 
-def random_pair(s, e):
+def random_pair(start, end):
     """TODO: Docstring for random_pair.
-    :returns: TODO
+
+    :start: (int) start for random number
+    :end:   (int) end for random number
+    :returns: pair for random numbers
 
     """
-    return np.random.randint(s, e), np.random.randint(s, e)
+    return np.random.randint(start, end), np.random.randint(start, end)
 
 
 def find_pos(state, obj):
+    """TODO: Docstring for random_pair.
+
+    :state
+    :obj
+    :returns: (x, y) position
+
+    """
     for i in range(0, 4):
         for j in range(0, 4):
             if (state[i, j] == obj).all():
@@ -24,8 +34,7 @@ def find_pos(state, obj):
 def init_grid():
     """TODO: Docstring for init_grid.
 
-    :arg1: TODO
-    :returns: TODO
+    :returns: state
 
     """
     state = np.zeros((4, 4, 5))
