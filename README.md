@@ -13,8 +13,7 @@ Install docker on your local machine by following the installation instructions 
 
 Build the required docker images:
 ```
-docker build lib/malmo-challenge/docker/malmo -t malmo:latest
-docker build lib/malmo-challenge/docker/malmopy-cntk-cpu-py27 -t malmopy-cntk-cpu-py27:latest
+make
 ```
 
 Check to make sure that the images have been compiled:
