@@ -4,11 +4,11 @@ DIR = ./lib/malmo-challenge/docker
 EDIR = ./sandhog
 ENAME = my_experiment
 
-default: build
+default: images
 
-build:
+images:
 	docker build $(DIR)/malmo -t malmo:$(TAG)
-	docker build $(DIR)/$(NAME) - t $(NAME):$(TAG)
+	docker build $(DIR)/$(NAME) -t $(NAME):$(TAG)
 
 experiment:
 	docker build $(EDIR) -t $(ENAME):$(TAG)
