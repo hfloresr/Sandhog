@@ -38,6 +38,7 @@ For Windows use either,
 [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm),
 or nmake (if you have Visual Studio).
 
+Alternatively, you can just copy and paste the docker commands from the Makefile.
 
 ## Build the docker images
 
