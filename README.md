@@ -32,8 +32,7 @@ malmo                   latest                       1b67b8e2cfa8        41 minu
 
 Run the challenge task with an example agent:
 ```
-cd malmopy-ai-challenge
-docker-compose up
+make experiment
 ```
 
 The experiment is set up to start a tensorboard process alongside the experiment.
