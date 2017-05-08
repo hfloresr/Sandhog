@@ -54,7 +54,7 @@ malmo                   latest                       1b67b8e2cfa8        41 minu
 
 ## Run the experiment
 
-Run the challenge task with an example agent:
+Run your experiement:
 ```
 make experiment
 ```
