@@ -26,7 +26,7 @@ services:
       expose:
         - "10000"
   agents:
-      image: my_malmo_experiment:latest
+      image: my_experiment:latest
       working_dir: /root/malmo-challenge/ai_challenge/pig_chase
       command: bash -c "python qlearner.py malmo1:10000 malmo2:10000 & tensorboard --logdir 'results' --port 6006"
       ports:
