@@ -1,0 +1,3 @@
+[submodule "lib/malmo-challenge"]
+	path = lib/malmo-challenge
+	url = git@github.com:Microsoft/malmo-challenge.git
