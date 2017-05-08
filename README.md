@@ -17,7 +17,8 @@ sudo apt-get install -y docker-engine
 sudo usermod -aG docker $(whoami)
 ```
 
-Install docker-compose
+
+Install docker-compose by following the installation instructions (https://docs.docker.com/compose/install/)
 
 
 ## Build the docker images
