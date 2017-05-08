@@ -20,6 +20,17 @@ sudo usermod -aG docker $(whoami)
 
 Install docker-compose by following the installation instructions (https://docs.docker.com/compose/install/)
 
+Be sure to clone this repository recursively or manually populate the malmo-challenge submodule
+```
+git clone --recursive https://github.com/hfloresr/Sandhog.git
+```
+or
+```
+git clone https://github.com/hfloresr/Sandhog.git
+cd Sandhog
+git submodule update --init --recursive
+```
+
 
 ## Build the docker images
 
