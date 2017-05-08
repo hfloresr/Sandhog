@@ -7,7 +7,7 @@ Install docker on your local machine by following the installation instructions 
 [Windows](https://docs.docker.com/docker-for-windows/install/), 
 [MacOS](https://docs.docker.com/docker-for-mac/install/).
 
-To install docker for linux:
+To install docker for linux (replace xenial with your release, E.g. lsb_release -cs):
 ```
 sudo apt-get update
 sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
