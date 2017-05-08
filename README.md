@@ -32,6 +32,12 @@ cd Sandhog
 git submodule update --init --recursive
 ```
 
+For Linux and MacOS, be sure to install any "development tools" for GNU compiler and make.
+For Windows use either,
+[Cygwin](https://www.cygwin.com/),
+[Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm),
+or nmake (if you have Visual Studio).
+
 
 ## Build the docker images
 
