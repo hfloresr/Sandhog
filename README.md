@@ -21,6 +21,12 @@ sudo usermod -aG docker $(whoami)
 
 Install docker-compose by following the installation instructions (https://docs.docker.com/compose/install/)
 
+To install docker compose on Ubuntu:
+```
+sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.11.2/docker-compose-$(uname -s)-$(uname -m)"
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
 Be sure to clone this repository recursively or manually to populate the malmo-challenge submodule
 ```
 git clone --recursive https://github.com/hfloresr/Sandhog.git
