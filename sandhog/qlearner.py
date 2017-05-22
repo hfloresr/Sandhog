@@ -5,20 +5,18 @@ import os
 import sys
 from argparse import ArgumentParser
 from datetime import datetime
-
-import six
 from os import path
 from threading import Thread, active_count
 from time import sleep
 
-from malmopy.agent import LinearEpsilonGreedyExplorer
+import six
 
-from common import parse_clients_args, visualize_training, ENV_AGENT_NAMES
 from agent import PigChaseChallengeAgent, PigChaseQLearnerAgent
+from common import ENV_AGENT_NAMES, parse_clients_args, visualize_training
 from environment import PigChaseEnvironment, PigChaseSymbolicStateBuilder
-
+from malmopy.agent import (LinearEpsilonGreedyExplorer, RandomAgent,
+                           TemporalMemory)
 from malmopy.environment.malmo import MalmoALEStateBuilder
-from malmopy.agent import TemporalMemory, RandomAgent
 
 try:
     from malmopy.visualization.tensorboard import TensorboardVisualizer
@@ -45,6 +43,7 @@ def agent_factory(name, role, clients, backend, device, max_epochs, logdir,
         builder = PigChaseSymbolicStateBuilder()
         env = PigChaseEnvironment(
             clients, builder, role=role, randomize_positions=True)
+
         agent = PigChaseChallengeAgent(name)
         if type(agent.current_agent) == RandomAgent:
             agent_type = PigChaseEnvironment.AGENT_TYPE_1
@@ -73,7 +72,6 @@ def agent_factory(name, role, clients, backend, device, max_epochs, logdir,
             action = agent.act(obs, reward, agent_done, is_training=True)
             # take a step
             obs, reward, agent_done = env.do(action)
-
     else:
         env = PigChaseEnvironment(
             clients,
@@ -84,14 +82,14 @@ def agent_factory(name, role, clients, backend, device, max_epochs, logdir,
 
         if backend == 'cntk':
             from malmopy.model.cntk import QNeuralNetwork
-            model = QNeuralNetwork(
-                (memory.history_length, 84, 84), env.available_actions, device)
+            model = QNeuralNetwork((memory.history_length, 84, 84),
+                                   env.available_actions, device)
         else:
             from malmopy.model.chainer import QNeuralNetwork, DQNChain
-            chain = DQNChain(
-                (memory.history_length, 84, 84), env.available_actions)
-            target_chain = DQNChain(
-                (memory.history_length, 84, 84), env.available_actions)
+            chain = DQNChain((memory.history_length, 84, 84),
+                             env.available_actions)
+            target_chain = DQNChain((memory.history_length, 84, 84),
+                                    env.available_actions)
             model = QNeuralNetwork(chain, target_chain, device)
 
         explorer = LinearEpsilonGreedyExplorer(1, 0.1, 1000000)
@@ -113,7 +111,6 @@ def agent_factory(name, role, clients, backend, device, max_epochs, logdir,
 
         max_training_steps = EPOCH_SIZE * max_epochs
         for step in six.moves.range(1, max_training_steps + 1):
-
             # check if env needs reset
             if env.done:
                 visualize_training(visualizer, step, viz_rewards)
