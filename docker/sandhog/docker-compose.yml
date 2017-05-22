@@ -11,7 +11,6 @@ services:
   agents:
       image: sandhog_experiment:latest
       working_dir: /root/malmo-challenge/ai_challenge/pig_chase
-      command: bash -c "conda install -c conda-forge openmpi -y"
       command: bash -c "python qlearner.py malmo1:10000 malmo2:10000 & tensorboard --logdir 'results' --port 6006"
       ports:
         - "6006:6006"
