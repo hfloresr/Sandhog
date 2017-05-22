@@ -1,9 +1,9 @@
-NAME 		= malmopy-cntk-cpu-py27
-TAG 		= latest
-LIB 		= ./lib/malmo-challenge/docker
-DIR 		= ./docker
-EXPDIR	= sandhog
-EXP			= sandhog_experiment
+NAME    = malmopy-cntk-cpu-py27
+TAG     = latest
+LIB     = ./lib/malmo-challenge/docker
+DIR     = ./docker
+EXPDIR  = sandhog
+EXP     = sandhog_experiment
 
 default: images
 
