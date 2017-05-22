@@ -30,7 +30,7 @@ sys.path.insert(0, os.getcwd())
 sys.path.insert(1, os.path.join(os.path.pardir, os.getcwd()))
 
 DQN_FOLDER = 'results/baselines/%s/dqn/%s-%s'
-EPOCH_SIZE = 10
+EPOCH_SIZE = 1000
 
 
 def agent_factory(name, role, clients, backend, device, max_epochs, logdir,
