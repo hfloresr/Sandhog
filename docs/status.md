@@ -28,7 +28,17 @@ We use reinforcement learning, specifically, a deep reinforcement learning algor
 
 ## Evaluation
 ![Alt text](results/agent2_episode_mean_q.PNG?raw=true "mean q")
+
 ![Alt text](results/agent2_episode_mean_stddev_q.PNG?raw=true "stddev q")
+
+![Alt text](results/training_actions_per_episode.PNG?raw=true "stddev q")
+
+![Alt text](results/training_max_reward.PNG?raw=true "stddev q")
+
+![Alt text](results/training_min_reward.PNG?raw=true "stddev q")
+
+![Alt text](results/training_reward_per_episode.PNG?raw=true "stddev q")
+
 
 ## Remaining Goals and Challenges
 
