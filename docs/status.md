@@ -27,7 +27,8 @@ The game uses a 9x9 grid board. We model the problem as a Markov Decision Proces
 We use reinforcement learning, specifically, a deep reinforcement learning algorithm where the algorithm uses Q-learning to update expectations of rewards, but a neural netowrk to approximate the value function. 
 
 ## Evaluation
-![Alt text](results/agent2_episode_mean_q.PNG?raw=true "Title")
+![Alt text](results/agent2_episode_mean_q.PNG?raw=true "mean q")
+![Alt text](results/agent2_episode_mean_stddev_q.PNG?raw=true "stddev q")
 
 ## Remaining Goals and Challenges
 
