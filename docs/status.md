@@ -31,13 +31,13 @@ We use reinforcement learning, specifically, a deep reinforcement learning algor
 
 ![Alt text](results/agent2_episode_mean_stddev_q.PNG?raw=true "stddev q")
 
-![Alt text](results/training_actions_per_episode.PNG?raw=true "stddev q")
+![Alt text](results/training_actions_per_episode.PNG?raw=true "training/actions per episode")
 
-![Alt text](results/training_max_reward.PNG?raw=true "stddev q")
+![Alt text](results/training_max_reward.PNG?raw=true "training/max reward")
 
-![Alt text](results/training_min_reward.PNG?raw=true "stddev q")
+![Alt text](results/training_min_reward.PNG?raw=true "training/min reward")
 
-![Alt text](results/training_reward_per_episode.PNG?raw=true "stddev q")
+![Alt text](results/training_reward_per_episode.PNG?raw=true "training/reward per episode")
 
 
 ## Remaining Goals and Challenges
