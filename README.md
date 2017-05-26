@@ -1,5 +1,6 @@
 # Sandhog
 
+![sandhog](http://99percentinvisible.org/app/uploads/2015/03/sandhogs-1.jpg)
 
 ## Prerequisites
 
