@@ -32,6 +32,11 @@ State Space:
 ![Alt text](results/state_space.PNG?raw=true "State Space")
 ![Alt text](results/labels.png?raw=true "Labels")
 
+### Algorithm:
+Linear epsilon greedy approach:
+Linear interpolation between $\epsilon__{max}$ to $\epsilon___{min}$ to linearly anneaal epsilon as a
+function of the current episode
+
 We use reinforcement learning, specifically, a deep reinforcement learning algorithm where the algorithm uses Q-learning to update expectations of rewards, but a neural netowrk to approximate the value function.
 
 ## Evaluation
