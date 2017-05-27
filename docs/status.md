@@ -12,6 +12,7 @@ We have since defined, however, an initial subgoal: to design and implement a pr
 ## Approach
 
 State Space:
+
 ![Alt text](results/state_space.PNG?raw=true "State Space")
 
 The game uses a 9x9 grid board. We model the problem as a Markov Decision Process (MDP) where
