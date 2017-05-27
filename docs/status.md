@@ -11,10 +11,6 @@ We have since defined, however, an initial subgoal: to design and implement a pr
 
 ## Approach
 
-State Space:
-
-![Alt text](results/state_space.PNG?raw=true "State Space")
-
 The game uses a 9x9 grid board. We model the problem as a Markov Decision Process (MDP) where
 
 1. The actions are  
@@ -27,6 +23,11 @@ The game uses a 9x9 grid board. We model the problem as a Markov Decision Proces
     * +25 for catching the pig
     * -1 for each action, and
 3. The states are agent's position on the board (x, y). 
+
+State Space:
+
+![Alt text](results/state_space.PNG?raw=true "State Space")
+![Alt text](results/labels.PNG?raw=true "Labels")
    
 We use reinforcement learning, specifically, a deep reinforcement learning algorithm where the algorithm uses Q-learning to update expectations of rewards, but a neural netowrk to approximate the value function. 
 
