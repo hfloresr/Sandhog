@@ -44,6 +44,12 @@ We use reinforcement learning, specifically, a deep reinforcement learning algor
 
 Over the next few weeks, our goals are to: 
 
+1. Make the agent more collaborative by embedding the other agent's actions into the states of our MDP.
+
+The challenges posed by these are:
+
+1. The increased complexity of a more collaborative approach.
+
 
 
 
