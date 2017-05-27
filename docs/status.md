@@ -27,7 +27,7 @@ The game uses a 9x9 grid board. We model the problem as a Markov Decision Proces
 State Space:
 
 ![Alt text](results/state_space.PNG?raw=true "State Space")
-![Alt text](results/labels.PNG?raw=true "Labels")
+![Alt text](results/labels.png?raw=true "Labels")
    
 We use reinforcement learning, specifically, a deep reinforcement learning algorithm where the algorithm uses Q-learning to update expectations of rewards, but a neural netowrk to approximate the value function. 
 
