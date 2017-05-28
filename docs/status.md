@@ -50,6 +50,7 @@ our neural network is as follows:
 | Dense | 512      |             |        |                   |            |          |
 
 
+
 Linear $$\epsilon-greedy$$ approach:
 Linear interpolation between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a
 function of the current episode.
