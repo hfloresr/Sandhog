@@ -44,8 +44,6 @@ our neural network is as follows:
 
 \begin{table}[]
 \centering
-\caption{My caption}
-\label{my-label}
 \begin{tabular}{ccccccc}
 \cline{6-6}
 \textbf{Layer} & \textbf{Input} & \textbf{Filter size} & \textbf{Stride} & \multicolumn{1}{c|}{\textbf{Number of filters}} & \multicolumn{1}{c|}{\textbf{Activation}} & \textbf{Output} \\ \cline{6-6}
