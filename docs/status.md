@@ -72,7 +72,7 @@ linearly anneal $$\epsilon$$ as a function of the current episode.
 The learning algorithm can be described as the following:
   * Initialize temporal memory $$T$$ to capacity $$N$$
   * Initialize action-value function $$Q$$ with random weights
-  * Initialize target action-value function $$\hatQ$$ with weights
+  * Initialize target action-value function $$\hat{Q}$$ with weights
 
 
 During learning,
