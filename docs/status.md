@@ -20,7 +20,7 @@ Given the complexity of the collaborative challenge, we will employ off-the-shel
 ![Alt text](results/labels.png){:height="40%" width="40%"}
 <center>Figure 1: Symbolic view of our state space.</center>
 
-
+<br>
 We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. The agent observes an image $$x_t \in \mathbb{R}^{d}$$ from the emulator, which is a vector of pixel values representing the current screen frame. The agent also receives a reward $$r_t$$ representing the change in game score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
   * +5 for exiting through a gate
   * +25 for catching the pig
