@@ -20,6 +20,7 @@ We consider the task in which our agent interacts with the Minecraft environment
   * +5 for exiting through a gate
   * +25 for catching the pig
   * -1 for each action
+A symbolic representation of the state space is shown in figure 1.
 
 State Space:
 
