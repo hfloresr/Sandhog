@@ -29,7 +29,7 @@ The goal of our agent is to select actions in order to maximize future rewards. 
 
 $$R_{t} = \sum_{t'=t}^{T} \gamma^{t'-t}r_{t'}$$,
 
-where $T$ is the number of time steps in an episode of the pig chase game. We define the optimal action-value function $Q^{*}(s,a) = \max_{\pi} \mathbb{E} [ R_{t} \, \lvert \, s_{t}=s, a_{t}=a, \pi ] $ as the maximum expected reward acheivable by following any policy $\pi$, after seeing some sequence $s$ and taking some action $a$.
+where $$T$$ is the number of time steps in an episode of the pig chase game. We define the optimal action-value function $$Q^{*}(s,a) = \max_{\pi} \mathbb{E} [ R_{t} \, \lvert \, s_{t}=s, a_{t}=a, \pi ]$$ as the maximum expected reward acheivable by following any policy $$\pi$$, after seeing some sequence $$s$$ and taking some action $$a$$.
 
 
 Symbolic State Space:
