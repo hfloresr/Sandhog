@@ -16,7 +16,7 @@ Given the complexity of the collaborative challenge, we will employ off-the-shel
 
 ## Approach
 
-We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = {turn_left, turn_right, step_forward}$$.
+We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$.
 
 The game uses a 9x9 grid board. We model the problem as a Markov Decision Process (MDP) where
 
