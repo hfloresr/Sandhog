@@ -106,18 +106,17 @@ The learning algorithm can be described as the following:
 
 
 ## Evaluation
-![](results/agent2_episode_mean_q.PNG){:height="50%" width="30%"} 
+![](results/agent2_episode_mean_q.PNG){:height="50%" width="50%"} 
 
-![Alt text](results/agent2_episode_mean_stddev_q.PNG){:height="50%" width="50%"}
+![](results/agent2_episode_mean_stddev_q.PNG){:height="50%" width="50%"}
 
+![](results/training_actions_per_episode.PNG){:height="50%" width="50%"}
 
-![Alt text](results/training_actions_per_episode.PNG){:height="50%" width="50%"}
+![](results/training_max_reward.PNG){:height="50%" width="50%"}
 
-![Alt text](results/training_max_reward.PNG){:height="50%" width="50%"}
+![](results/training_min_reward.PNG){:height="50%" width="50%"}
 
-![Alt text](results/training_min_reward.PNG){:height="50%" width="50%"}
-
-![Alt text](results/training_reward_per_episode.PNG){:height="50%" width="50%"}
+![](results/training_reward_per_episode.PNG){:height="50%" width="50%"}
 
 
 
