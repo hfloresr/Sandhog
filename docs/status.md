@@ -8,7 +8,7 @@ title: Status
 
 ## Project Summary
 
-The focus our project is to design and implement a learning algorithm that trains an agent to collaborate with another (human or non-human) agent to catch a pig in Minecraft according to the rules of [The Malmo Collaborative AI Challenge](https://www.microsoft.com/en-us/research/academic-program/collaborative-ai-challenge/# "Challenge Homepage").
+The focus of our project is to design and implement a learning algorithm that trains an agent to collaborate with another (human or non-human) agent to catch a pig in Minecraft according to the rules of [The Malmo Collaborative AI Challenge](https://www.microsoft.com/en-us/research/academic-program/collaborative-ai-challenge/# "Challenge Homepage").
 
 We have defined our baseline agent to be one that uses $$A^{*}$$ to determine the shortest distance to aid in capturing the pig. We aim to improve our baseline by using reinfocement learning and train an agent to maximize aggregate future rewards.
 
@@ -16,13 +16,14 @@ Given the complexity of the collaborative challenge, we will employ off-the-shel
 
 ## Approach
 
+We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = {turn_left, turn_right, step_forward}$$.
+
 The game uses a 9x9 grid board. We model the problem as a Markov Decision Process (MDP) where
 
 1. The actions are
     * Turn right
     * Turn left
     * Move forward one step
-    * Move backward one step
 2. The rewards are
     * +5 for exiting through a gate
     * +25 for catching the pig
@@ -41,7 +42,7 @@ To avoid an extremely large Q-table, we used a function approximator to approxim
 $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 
 
-The functionn approximator used in this project is non-linear deep neural network. The architecture for
+The function approximator used in this project is non-linear deep neural network. The architecture for
 our neural network is as follows:
 
 <br>
@@ -108,7 +109,7 @@ The learning algorithm can be described as the following:
 
 
 ## Evaluation
-![](results/agent2_episode_mean_q.PNG){:height="50%" width="50%"} 
+![](results/agent2_episode_mean_q.PNG){:height="50%" width="50%"}
 
 ![](results/agent2_episode_mean_stddev_q.PNG){:height="50%" width="50%"}
 
