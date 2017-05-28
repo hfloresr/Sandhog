@@ -84,7 +84,7 @@ The learning algorithm can be described as the following:
           * Set $$y_{j} =
                 \begin{cases}
                 r_{j}, & \text{if episode terminates at step $j+1$} \\
-                r_{j} + \gamma \max{a'} \hat{Q}(\phi_{j+1}, a'; \theta^{-}), & \text{otherwise}
+                r_{j} + \gamma \max_{a'} \hat{Q}(\phi_{j+1}, a'; \theta^{-}), & \text{otherwise}
                 \end{cases}$$
 
 
