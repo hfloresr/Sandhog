@@ -33,7 +33,7 @@ State Space:
 ![Alt text](results/labels.png?raw=true "Labels")
 
 ### Algorithm:
-Our state is an $$84 \bigtimes 84$$ grayscale image which represents the screen pixels of the pig chase game.
+Our state is an $$84 \times 84$$ grayscale image which represents the screen pixels of the pig chase game.
 To avoid an extremely large Q-table, we used a function approximator to approximate the Q function:
 
 $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
