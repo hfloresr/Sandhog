@@ -16,10 +16,9 @@ Given the complexity of the collaborative challenge, we will employ off-the-shel
 
 ## Approach
 
-Figure 1: Symbolic State Space
-
 ![Alt text](results/state_space.PNG){:height="40%" width="40%"}
 ![Alt text](results/labels.png){:height="40%" width="40%"}
+<center>Figure 1: Symbolic view of our state space.</center>
 
 
 We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. The agent observes an image $$x_t \in \mathbb{R}^{d}$$ from the emulator, which is a vector of pixel values representing the current screen frame. The agent also receives a reward $$r_t$$ representing the change in game score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
@@ -41,13 +40,11 @@ $$Q^{*}(s,a) = \max_{\pi} \mathbb{E} [ R_{t} \, \lvert \, s_{t}=s, a_{t}=a, \pi 
 
 The optimal policy can be obtained by solving the Bellman equation iteratively, however we would have to maintain estimates of the action-value function for all states in a $$Q$$-table. Since our state are a vector of screen pixels that are rescaled to an image of size $$84\times84$$ with $$4$$ consecutive images and $$256$$ gray levels, our $$Q$$-table would be $$256^{4\times84\times84}$$.
 
-To avoid an extremely large Q-table, we used a function approximator to approximate the Q function:
+To avoid an extremely large Q-table, we used a function approximator to approximate the $$Q$$ function:
 
 $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 
-
-The function approximator used in this project is non-linear deep neural network. The architecture for
-our neural network is as follows:
+In this project we used a convolution neural network as a nonlinear function approximator to estimate the action-value $$Q$$ function. The architecture for our neural network is as follows:
 
 <br>
 <p align="center">
