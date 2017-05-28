@@ -53,7 +53,7 @@ $$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
 \text{Convolution 3} & 9\times9\times64 & 3\times3 & 1 & 64 & \text{ReLU} & 7\times7\times64 \\
 \hline
-\text{Dense} & 512 & & & & &
+\text{Dense} & 512 & & & & & \\
 \hline
 \end{array}$$
 
