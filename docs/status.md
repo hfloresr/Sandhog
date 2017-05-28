@@ -50,6 +50,13 @@ our neural network is as follows:
 | Dense | 512      |             |        |                   |            |          |
 
 
+The Q-learning update uses the Huber loss function, defined as:
+
+$$L(\theta) =
+\begin{cases}
+\frac{1}{2}(\theta - \hat{\theta})^2, & \text{if $\abs{\theta - \hat{\theta}} \lt \delta \\
+0 & \text{o.w}
+\end{cases}$$
 
 Linear $$\epsilon-greedy$$ approach:
 Linear interpolation between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a
