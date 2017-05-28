@@ -47,15 +47,8 @@ $$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
 \textbf{Layer} & \textbf{Input} & \textbf{Filter size} & \textbf{Stride} & \textbf{Number of filters} & \textbf{Activation} & \textbf{Output} \\
 \hline
-\text{Convolution 1} & 84\times 84\times84 & 8\times 8 & 4 & 32 & \text{ReLU} & 20\times20\times32 \\
+\text{Convolution 1} & 84\times84\times84 & 8\times8 & 4 & 32 & \text{ReLU} & 20\times20\times32 \\
 \hline
-\text{Convolution 2} & 20\times20\times32 & 4\times4 & 2 & 64 & \text{ReLU} & 9\times9\times64 \\
-\hline
-\text{Convolution 3} & 9\times9\times64 & 3\times3 & 1 & 64 & \text{ReLU} & 7\times7\times64 \\
-\hline
-\text{Dense} & 54 & & & & & \\
-\hline
-
 \end{array}$$
 <br>
 The Q-learning update uses the Huber loss function, defined as:
