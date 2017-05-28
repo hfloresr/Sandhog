@@ -43,11 +43,10 @@ The functionn approximator used in this project is non-linear deep neural networ
 our neural network is as follows:
 
 <br>
-$$\begin{array} {|c|c|c|c|c|c|c|}
+$$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
-\text{Layer} & \text{Input} & \text{Filter size} & \text{Stride} & \text{Number of filters} & \text{Activation} & \text{Output} \\
+1\text{Layer} & 2\text{Input} & 3\text{Filter size} & 4\text{Stride} & 5\text{Number of filters} & 6\text{Activation} & 7\text{Output} \\
 \hline
-
 \end{array}$$
 <br>
 The Q-learning update uses the Huber loss function, defined as:
