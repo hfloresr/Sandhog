@@ -75,10 +75,10 @@ to optimize the Huber loss function.
 
 <br>
 Since reinforcement learning with a neural network is known to be unstable we used experience replay
-that randomly samples the data to remove correlations in the obseration sequence. Our temporal memory
+that randomly samples the data to remove correlations in the observation sequence. Our temporal memory
 stores $$N$$ previouse samples of the agent's experiences $$(t, t-1, t-2, .. , t-N)$$. During training,
 we use a linear $$\epsilon-greedy$$ approach to offset the exploration/exploitation dilemma. The linear
-$$\epsilon-greedy$$ approach linearly interpolates betwee $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to
+$$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to
 linearly anneal $$\epsilon$$ as a function of the current episode.
 
 The learning algorithm can be described as the following:
