@@ -58,7 +58,8 @@ $$L(\theta) =
 \delta |\theta| - \frac{1}{2}\delta^{2}, & \text{if $|\theta| \geq \delta$}
 \end{cases}$$
 
-where $$\delta \, (\geq 0)$$ is the outlier threshold parameter.
+where $$\delta \, (\geq 0)$$ is the outlier threshold parameter. We used stochasitc gradient descent
+to optimize the Huber loss function.
 
 Linear $$\epsilon-greedy$$ approach:
 Linear interpolation between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a
@@ -68,7 +69,6 @@ Temporal Memory to store N previous samples $$(t, t-1, t-2, ... , t-N)$$
 
 
 
-We use reinforcement learning, specifically, a deep reinforcement learning algorithm where the algorithm uses Q-learning to update expectations of rewards, but a neural netowrk to approximate the value function.
 
 ## Evaluation
 ![Alt text](results/agent2_episode_mean_q.PNG?raw=true "mean q")
