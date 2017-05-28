@@ -42,7 +42,7 @@ $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 The functionn approximator used in this project is non-linear deep neural network. The architecture for
 our neural network is as follows:
 
-\begin{table}[]
+$$\begin{table}[]
 \centering
 \begin{tabular}{ccccccc}
 \cline{6-6}
@@ -52,7 +52,7 @@ Convolution 2  & 20x20x32       & 4x4                  & 2               & 64   
 Convolution 3  & 9x9x64         & 3x3                  & 1               & 64                                              & ReLU                                     & 7x7x64          \\
 Dense          & 512            &                      &                 &                                                 &                                          &
 \end{tabular}
-\end{table}
+\end{table}$$
 
 
 The Q-learning update uses the Huber loss function, defined as:
