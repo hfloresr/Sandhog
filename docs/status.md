@@ -54,7 +54,7 @@ The Q-learning update uses the Huber loss function, defined as:
 
 $$L(\theta) =
 \begin{cases}
-\frac{1}{2}(\theta - \hat{\theta})^2, & \text{if $\abs{\theta - \hat{\theta}} \lt \delta \\
+x \lt \delta \\
 0 & \text{o.w}
 \end{cases}$$
 
