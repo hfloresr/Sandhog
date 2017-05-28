@@ -42,12 +42,60 @@ $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 The functionn approximator used in this project is non-linear deep neural network. The architecture for
 our neural network is as follows:
 
-|     Layer     |   Input  | Filter size | Stride | Number of filters | Activation |  Output  |
-|:-------------:|:--------:|:-----------:|:------:|:-----------------:|:----------:|:--------:|
-| Convolution 1 | 84x84x84 |     8x8     |    4   |         32        |    ReLU    | 20x20x32 |
-| Convolution 2 | 20x20x32 |     4x4     |    2   |         64        |    ReLU    |  9x9x64  |
-| Convolution 3 |  9x9x64  |     3x3     |    1   |         64        |    ReLU    |  7x7x64  |
-|     Dense     |    512   |             |        |                   |            |          |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-baqh">Layer</th>
+    <th class="tg-baqh">Input<br></th>
+    <th class="tg-baqh">Filter size<br></th>
+    <th class="tg-baqh">Stride<br></th>
+    <th class="tg-baqh">Number of filters<br></th>
+    <th class="tg-baqh">Activation</th>
+    <th class="tg-baqh">Output</th>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Convolution 1<br></td>
+    <td class="tg-baqh">84x84x84</td>
+    <td class="tg-baqh">8x8</td>
+    <td class="tg-baqh">4</td>
+    <td class="tg-baqh">32</td>
+    <td class="tg-baqh">ReLU<br></td>
+    <td class="tg-baqh">20x20x32</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Convolution 2<br></td>
+    <td class="tg-baqh">20x20x32</td>
+    <td class="tg-baqh">4x4</td>
+    <td class="tg-baqh">2</td>
+    <td class="tg-baqh">64</td>
+    <td class="tg-baqh">ReLU<br></td>
+    <td class="tg-baqh">9x9x64</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Convolution 3<br></td>
+    <td class="tg-baqh">9x9x64</td>
+    <td class="tg-baqh">3x3</td>
+    <td class="tg-baqh">1</td>
+    <td class="tg-baqh">64</td>
+    <td class="tg-baqh">ReLU</td>
+    <td class="tg-baqh">7x7x64</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">Dense</td>
+    <td class="tg-baqh">512</td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
+</table>
+
 <br>
 
 $$\begin{array} {|r|r|}
