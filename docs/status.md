@@ -106,6 +106,8 @@ The learning algorithm can be described as the following:
 
 
 ## Evaluation
+![Alt text](results/agent2_episode_mean_q.PNG = 50x50)
+
 ![Alt text](results/agent2_episode_mean_q.PNG?raw=true "mean q")
 
 ![Alt text](results/agent2_episode_mean_stddev_q.PNG?raw=true "stddev q")
