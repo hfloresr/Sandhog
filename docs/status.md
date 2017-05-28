@@ -55,7 +55,7 @@ The Q-learning update uses the Huber loss function, defined as:
 $$L(\theta) =
 \begin{cases}
 \frac{1}{2}{\theta}^2, & \text{if condition1} \\
-\delta |\theta| - \frac{1}{2}\delta, & \text{o.w}
+\delta |\theta| - \frac{1}{2}\delta^{2}, & \text{o.w}
 \end{cases}$$
 
 Linear $$\epsilon-greedy$$ approach:
