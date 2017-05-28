@@ -27,11 +27,11 @@ Since the agent only observes the current screen, it is impossible for the agent
 
 The goal of our agent is to select actions in order to maximize future rewards. With the discount factor of $$\gamma \; (=0.99)$$, our future reward at time $$t$$ is defined as:
 
-$$R_{t} = \sum_{t'=t}^{T} \gamma^{t'-t}r_{t'}$$,
+$$R_{t} = \sum_{t'=t}^{T} \gamma^{t'-t}r_{t'} \text{,}$$
 
 where $$T$$ is the number of time steps in an episode of the pig chase game. We use the standard definition of the optimal action-value function in which the maximum expected reward acheivable by following any policy $$\pi$$, after seeing some sequence $$s$$ and taking some action $$a$$ is,
 
-$$Q^{*}(s,a) = \max_{\pi} \mathbb{E} [ R_{t} \, \lvert \, s_{t}=s, a_{t}=a, \pi ]$$ as 
+$$Q^{*}(s,a) = \max_{\pi} \mathbb{E} [ R_{t} \, \lvert \, s_{t}=s, a_{t}=a, \pi ]$$
 
 
 Symbolic State Space:
