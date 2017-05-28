@@ -33,8 +33,8 @@ State Space:
 ![Alt text](results/labels.png?raw=true "Labels")
 
 ### Algorithm:
-Linear epsilon greedy approach:
-Linear interpolation between $\epsilon$ to $$\epsilon$$ to linearly anneal epsilon as a
+Linear $$\epsilon-greedy$$ approach:
+Linear interpolation between $$\epsilon__{max_}$$ to $$\epsilon__{min}$$ to linearly anneal $$\epsilon$$ as a
 function of the current episode.
 
 Temporal Memory to store N previous samples (t, t-1, t-2, ... , t-N)
