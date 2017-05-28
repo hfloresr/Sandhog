@@ -55,10 +55,10 @@ The Q-learning update uses the Huber loss function, defined as:
 $$L(\theta) =
 \begin{cases}
 \frac{1}{2}{\theta}^2, & \text{if $|\theta| \lt \delta$} \\
-\delta |\theta| - \frac{1}{2}\delta^{2}, & \text{if $|\delta| \geq \delta$}
+\delta |\theta| - \frac{1}{2}\delta^{2}, & \text{if $|\theta| \geq \delta$}
 \end{cases}$$
 
-where $$\delta (\geq 0)$$ is the outlier threshold parameter.
+where $$\delta \hspace (\geq 0)$$ is the outlier threshold parameter.
 
 Linear $$\epsilon-greedy$$ approach:
 Linear interpolation between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a
