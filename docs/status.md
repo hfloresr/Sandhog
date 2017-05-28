@@ -61,11 +61,22 @@ $$L(\theta) =
 where $$\delta \, (\geq 0)$$ is the outlier threshold parameter. We used stochasitc gradient descent
 to optimize the Huber loss function.
 
-Linear $$\epsilon-greedy$$ approach:
-Linear interpolation between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a
-function of the current episode.
+<br>
+Since reinforcement learning with a neural network is known to be unstable we used experience replay
+that randomly samples the data to remove correlations in the obseration sequence. Our temporal memory
+stores $$N$$ previouse samples of the agent's experiences $$(t, t-1, t-2, .. , t-N)$$. During training,
+we use a linear $$\epsilon-greedy$$ approach to offset the exploration/exploitation dilemma. The linear
+$$\epsilon-greedy$$ approach linearly interpolates betwee $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to
+linearly anneal $$\epsilon$$ as a function of the current episode.
 
-Temporal Memory to store N previous samples $$(t, t-1, t-2, ... , t-N)$$
+The learning algorithm can be described as the following:
+  * Initialize temporal memory $$T$$ to capacity $$N$$
+  * Initialize action-value function $$Q$$ with random weights
+  * Initialize target action-value function $$\hatQ$$ with weights
+
+
+During learning,
+the Q-learning updates are applied using the Huber loss function as previously described.
 
 
 
