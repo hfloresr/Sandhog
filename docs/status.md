@@ -43,9 +43,9 @@ The functionn approximator used in this project is non-linear deep neural networ
 our neural network is as follows:
 
 <br>
-$$\begin{array} {| r | r | r | r | r | r | r |}
+$$\begin{array} {|c|c|c|c|c|c|c|}
 \hline
-Layer & Input & Filter size & Stride & Number of filters & Activation & Output \\
+\text{Layer} & \text{Input} & \text{Filter size} & \text{Stride} & \text{Number of filters} & \text{Activation} & \text{Output} \\
 \hline
 
 \end{array}$$
