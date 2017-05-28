@@ -27,7 +27,7 @@ Since the agent only observes the current screen, it is impossible for the agent
 
 The goal of our agent is to select actions in order to maximize future rewards. With the discount factor of $$\gamma \; (=0.99)$$, our future rward at time $$t$$ is defined as:
 
-$$R_{t} = \sum{t'=t}^{T} \gamma^{t'-t}r_{t']$$
+$$R_{t} = \sum_{t'=t}^{T} \gamma^{t'-t}r_{t'}$$
 
 Symbolic State Space:
 
