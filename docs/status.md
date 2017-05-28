@@ -16,8 +16,8 @@ Given the complexity of the collaborative challenge, we will employ off-the-shel
 
 ## Approach
 
-![Alt text](results/state_space.PNG){:height="40%" width="40%"}
-![Alt text](results/labels.png){:height="40%" width="40%"}
+![Alt text](results/state_space.PNG){:height="35%" width="35%"}
+![Alt text](results/labels.png){:height="35%" width="35%"}
 <center>Figure 1: Symbolic view of our state space.</center>
 
 <br>
