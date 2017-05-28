@@ -39,6 +39,17 @@ To avoid an extremely large Q-table, we used a function approximator to approxim
 $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 
 
+The functionn approximator used in this project is non-linear deep neural network. The architecture for
+our neural network is as follows:
+
+| Layer | Input    | Filter size | Stride | Number of filters | Activation | Output   |
+|:-----:|:--------:|:-----------:|:------:|:-----------------:|:----------:|:--------:|
+| Conv1 | 84x84x4  | 8x8         | 4      | 32                | ReLU       | 20x20x32 |
+| Conv2 | 20x20x32 | 4x4         | 2      | 64                | ReLU       | 9x9x64   |
+| Conv3 | 9x9x64   | 3x3         | 1      | 64                | ReLU       | 7x7x64   |
+| Dense | 512      |             |        |                   |            |          |
+
+
 Linear $$\epsilon-greedy$$ approach:
 Linear interpolation between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a
 function of the current episode.
