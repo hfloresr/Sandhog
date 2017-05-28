@@ -16,19 +16,10 @@ Given the complexity of the collaborative challenge, we will employ off-the-shel
 
 ## Approach
 
-We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. The agent observses an image $$x_t \in \mathbb{R}^{d}$$ from the emulator, which is a vector of pixel values representing the current screen frame.
-
-The game uses a 9x9 grid board. We model the problem as a Markov Decision Process (MDP) where
-
-1. The actions are
-    * Turn right
-    * Turn left
-    * Move forward one step
-2. The rewards are
-    * +5 for exiting through a gate
-    * +25 for catching the pig
-    * -1 for each action, and
-3. The states are agent's position on the board (x, y).
+We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. The agent observes an image $$x_t \in \mathbb{R}^{d}$$ from the emulator, which is a vector of pixel values representing the current screen frame. The agent also receives a reward $$r_t$$ representing the change in gamee score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
+  * +5 for exiting through a gate
+  * +25 for catching the pig
+  * -1 for each action
 
 State Space:
 
