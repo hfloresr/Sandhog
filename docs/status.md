@@ -20,8 +20,10 @@ We consider the task in which our agent interacts with the Minecraft environment
   * +5 for exiting through a gate
   * +25 for catching the pig
   * -1 for each action
-  
+
 A symbolic representation of the state space is shown in figure 1.
+
+Since the agent only observes the current screen, it is impossible for the agent to fully perceive the current situation fom the the current screen frame $$x_t$$. Therefore, we consider the sequences of actions and observations, $$s_t = x_{1},a_{1},x_{2}, ... , a_{t-1}, x_{t}$$,
 
 Symbolic State Space:
 
