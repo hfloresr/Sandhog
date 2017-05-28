@@ -28,7 +28,7 @@ We consider the task in which our agent interacts with the Minecraft environment
 
 A symbolic representation of the state space is shown in figure 1.
 
-Since the agent only observes the current screen, it is impossible for the agent to fully perceive the current situation fom the the current screen $$x_t$$. Therefore, we consider the sequences of actions and observations, $$s_t = x_{1},a_{1},x_{2}, ... , a_{t-1}, x_{t}$$, where $$x_t$$ is is the vector of pixel values that represent the visual input from the agent. The sequences are large but finite, therefore formalizing our finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$.
+Since the agent only observes the current screen, it is impossible for the agent to fully perceive the current situation fom the the current screen $$x_t$$. Therefore, we consider the sequences of actions and observations, $$s_t = x_{1},a_{1},x_{2}, ... , a_{t-1}, x_{t}$$, where $$x_t$$ is the vector of pixel values that represent the visual input from the agent. The sequences are large but finite, therefore formalizing our finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$.
 
 The goal of our agent is to select actions in order to maximize future rewards. With the discount factor of $$\gamma \; (=0.99)$$, our future reward at time $$t$$ is defined as:
 
@@ -88,7 +88,7 @@ Since we are working with raw pixel values for Minecraft, we introduce the funct
 The learning algorithm can be described as the following:
   * Initialize temporal memory $$D$$ to capacity $$N$$
   * Initialize action-value function $$Q$$ with random weights $$\theta$$
-  * Initialize target action-value function $$\hat{Q}$$ with weights $$\theta^{-}$$
+  * Initialize target action-value function $$\hat{Q}$$ with weights $$\theta^{-} = \theta$$
   * **For** episode $$= 1, ... , M$$:
       * Initialize sequence $$s_1 = {x_1}$$ and preprocessed sequence $$\phi_1 = \phi(s_1)$$
       * **For** $$t = 1, ..., T$$:
