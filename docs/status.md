@@ -49,6 +49,8 @@ $$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
 \text{Convolution 1} & 84\times84\times84 & 8\times8 & 4 & 32 & \text{ReLU} & 20\times20\times32 \\
 \hline
+\text{Convolution 2} & 20\times20\times32 & 4\times4 & 2 & 64 & \text{ReLU} & 9\times9\times64 \\
+\hline
 \end{array}$$
 <br>
 The Q-learning update uses the Huber loss function, defined as:
