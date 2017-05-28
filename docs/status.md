@@ -16,7 +16,7 @@ Given the complexity of the collaborative challenge, we will employ off-the-shel
 
 ## Approach
 
-We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. The agent observes an image $$x_t \in \mathbb{R}^{d}$$ from the emulator, which is a vector of pixel values representing the current screen frame. The agent also receives a reward $$r_t$$ representing the change in gamee score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
+We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. The agent observes an image $$x_t \in \mathbb{R}^{d}$$ from the emulator, which is a vector of pixel values representing the current screen frame. The agent also receives a reward $$r_t$$ representing the change in game score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
   * +5 for exiting through a gate
   * +25 for catching the pig
   * -1 for each action
@@ -25,9 +25,13 @@ A symbolic representation of the state space is shown in figure 1.
 
 Since the agent only observes the current screen, it is impossible for the agent to fully perceive the current situation fom the the current screen $$x_t$$. Therefore, we consider the sequences of actions and observations, $$s_t = x_{1},a_{1},x_{2}, ... , a_{t-1}, x_{t}$$, where $$x_t$$ is is the vector of pixel values that represent the visual input from the agent. The sequences are large but finite, therefore formalizing our finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$.
 
-The goal of our agent is to select actions in order to maximize future rewards. With the discount factor of $$\gamma \; (=0.99)$$, our future rward at time $$t$$ is defined as:
+The goal of our agent is to select actions in order to maximize future rewards. With the discount factor of $$\gamma \; (=0.99)$$, our future reward at time $$t$$ is defined as:
 
-$$R_{t} = \sum_{t'=t}^{T} \gamma^{t'-t}r_{t'}$$
+$$R_{t} = \sum_{t'=t}^{T} \gamma^{t'-t}r_{t'}$$,
+
+where $$T$$ is the number of time steps in an episode of the pig chase game. We define the optimal action-value function $$Q^{*}(s,a) = \max_{\pi} \mathbb{E}\[R_{t} | s_{t}=s, a_{t}=a, \pi\]$$ as the maximum expected reward acheivable by following any policy $$\pi$$, after seeing some sequence $$s$$ and taking some action $$a$$.
+
+
 
 Symbolic State Space:
 
