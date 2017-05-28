@@ -45,7 +45,7 @@ our neural network is as follows:
 <br>
 $$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
-1\text{Layer} & 2\text{Input} & 3\text{Filter size} & 4\text{Stride} & 5\text{Number of filters} & 6\text{Activation} & 7\text{Output} \\
+\text{Layer} & \text{Input} & \text{Filter size} & \text{Stride} & \text{Number of filters} & \text{Activation} & \text{Output} \\
 \hline
 \end{array}$$
 <br>
