@@ -106,9 +106,8 @@ The learning algorithm can be described as the following:
 
 
 ## Evaluation
-![Alt text](results/agent2_episode_mean_q.PNG){:height="50%" width="50%"}
+![Alt text](results/agent2_episode_mean_q.PNG){:height="50%" width="50%"} ![Alt text](results/agent2_episode_mean_stddev_q.PNG){:height="50%" width="50%"}
 
-![Alt text](results/agent2_episode_mean_stddev_q.PNG){:height="50%" width="50%"}
 
 ![Alt text](results/training_actions_per_episode.PNG){:height="50%" width="50%"}
 
