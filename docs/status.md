@@ -106,7 +106,7 @@ The learning algorithm can be described as the following:
 
 
 ## Evaluation
-![](results/agent2_episode_mean_q.PNG){:height="50%" width="50%"} 
+![](results/agent2_episode_mean_q.PNG){:height="50%" width="30%"} 
 
 ![Alt text](results/agent2_episode_mean_stddev_q.PNG){:height="50%" width="50%"}
 
