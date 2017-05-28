@@ -50,13 +50,13 @@ our neural network is as follows:
 |     Dense     |    512   |             |        |                   |            |          |
 <br>
 
-\begin{array} {|r|r|}
+$$\begin{array} {|r|r|}
 \hline
 1 &2 \\
 \hline
 3 &4 \\
 \hline
-\end{array}
+\end{array}$$
 
 <br>
 The Q-learning update uses the Huber loss function, defined as:
