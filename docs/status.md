@@ -44,7 +44,7 @@ To avoid an extremely large Q-table, we used a function approximator to approxim
 
 $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 
-In this project we used a convolution neural network as a nonlinear function approximator to estimate the action-value $$Q$$ function. The architecture for our neural network is as follows:
+In this project we used a convolution neural network as a nonlinear function approximator to estimate the action-value $$Q$$ function, where $$\theta$$ is our neural network weights. The architecture for our neural network is as follows:
 
 <br>
 <p align="center">
@@ -64,15 +64,15 @@ $$\begin{array}{|c|c|c|c|c|c|c|}
 </p>
 
 <br>
-The Q-learning update uses the Huber loss function, defined as:
+The $$Q$$-learning update uses the Huber loss function, defined as:
 
-$$L(\theta) =
+$$L(x) =
 \begin{cases}
-\frac{1}{2}{\theta}^2, & \text{if $|\theta| \lt \delta$} \\
-\delta |\theta| - \frac{1}{2}\delta^{2}, & \text{if $|\theta| \geq \delta$}
+\frac{1}{2}{x}^2, & \text{if $|x| \lt \delta$} \\
+\delta |x| - \frac{1}{2}\delta^{2}, & \text{if $|x| \geq \delta$}
 \end{cases}$$
 
-where $$\delta \, (\geq 0)$$ is the outlier threshold parameter. We used stochasitc gradient descent
+where $$\delta \; (= 0)$$ is the outlier threshold parameter. We used stochasitc gradient descent
 to optimize the Huber loss function.
 
 <br>
@@ -80,8 +80,10 @@ Since reinforcement learning with a neural network is known to be unstable we us
 that randomly samples the data to remove correlations in the observation sequence. Our temporal memory
 stores $$N$$ previouse samples of the agent's experiences $$(t, t-1, t-2, .. , t-N)$$. During training,
 we use a linear $$\epsilon-greedy$$ approach to offset the exploration/exploitation dilemma. The linear
-$$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to
+$$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max} \; (=1)$$ to $$\epsilon_{min} \; (=0.1)$$ to
 linearly anneal $$\epsilon$$ as a function of the current episode.
+
+Since we are working with raw pixel values for Minecraft, we introduce the function $$\phi$$ which takes $$m = 4$$ most recent frames and scales the RGB frame into an $$84\times84$$ grayscale frame.
 
 The learning algorithm can be described as the following:
   * Initialize temporal memory $$D$$ to capacity $$N$$
