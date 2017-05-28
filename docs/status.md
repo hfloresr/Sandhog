@@ -73,7 +73,7 @@ The learning algorithm can be described as the following:
   * Initialize temporal memory $$D$$ to capacity $$N$$
   * Initialize action-value function $$Q$$ with random weights $$\theta$$
   * Initialize target action-value function $$\hat{Q}$$ with weights $$\theta^{-}$$
-  * **For** episode = 1,..,$$M$$:
+  * **For** episode $$= 1, ... , M$$:
       * Initialize sequence $$s_1 = {x_1}$$ and preprocessed sequence $$\phi_1 = \phi(s_1)$$
       * **For** $$t = 1, ..., T$$:
           * Select random action $$a_t$$ with probability $$\epsilon$$
