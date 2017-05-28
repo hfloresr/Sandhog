@@ -8,9 +8,11 @@ title: Status
 
 ## Project Summary
 
-The ultimate goal of our project remains the same: to design and implement a learning algorithm that trains an agent to collaborate with another (human or non-human) agent to catch a pig in Minecraft according to the rules of [The Malmo Collaborative AI Challenge](https://www.microsoft.com/en-us/research/academic-program/collaborative-ai-challenge/# "Challenge Homepage").
+The focus our project is to design and implement a learning algorithm that trains an agent to collaborate with another (human or non-human) agent to catch a pig in Minecraft according to the rules of [The Malmo Collaborative AI Challenge](https://www.microsoft.com/en-us/research/academic-program/collaborative-ai-challenge/# "Challenge Homepage").
 
-We have since defined, however, an initial subgoal: to design and implement a prototype of this algorithm using off-the-shelf Q-learning methods.
+We have defined our baseline agent to be one that uses $$A^{*}$$ to determine the shortest distance to the pig to aid in capturing the pig. We aim to improve our baseline by using reinfocement learning and train an agent to maximize aggregate future rewards.
+
+Given the complexity of the collaborative challenge, we will employ off-the-shelf reinforcement learning algorithms to provide the necessary flexibility to explore various reinforcement design paradigms along with parameter tuning.
 
 ## Approach
 
