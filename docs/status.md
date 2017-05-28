@@ -86,7 +86,7 @@ The learning algorithm can be described as the following:
                 r_{j}, & \text{if episode terminates at step $j+1$} \\
                 r_{j} + \gamma \max_{a'} \hat{Q}(\phi_{j+1}, a'; \theta^{-}), & \text{otherwise}
                 \end{cases}$$
-          * Perform stocahstic gradient descent step on $$L(y_j = Q(\phi_{j},a{j};\theta))$$, where
+          * Perform stocahstic gradient descent step on $$L(y_j - Q(\phi_{j},a{j};\theta))$$, where
             $$L$$ is the Huber loss function as previously described.
           * Every $$C$$ steps reset $$\hat{Q} = Q$$
 
