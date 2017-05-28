@@ -33,11 +33,18 @@ State Space:
 ![Alt text](results/labels.png?raw=true "Labels")
 
 ### Algorithm:
+Our state is an $$84 x 84$$ grayscale image which represents the screen pixels of the pig chase game.
+To avoid an extremely large Q-table, we used a function approximator to approximate the Q function:
+
+$$Q(s, a; \theta) \approx Q^{****}(s, a)$$
+
+
 Linear $$\epsilon-greedy$$ approach:
 Linear interpolation between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a
 function of the current episode.
 
-Temporal Memory to store N previous samples (t, t-1, t-2, ... , t-N)
+Temporal Memory to store N previous samples $$(t, t-1, t-2, ... , t-N)$$
+
 
 
 We use reinforcement learning, specifically, a deep reinforcement learning algorithm where the algorithm uses Q-learning to update expectations of rewards, but a neural netowrk to approximate the value function.
