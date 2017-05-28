@@ -36,7 +36,7 @@ State Space:
 Our state is an $$84 x 84$$ grayscale image which represents the screen pixels of the pig chase game.
 To avoid an extremely large Q-table, we used a function approximator to approximate the Q function:
 
-$$Q(s, a; \theta) \approx Q^{****}(s, a)$$
+$$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 
 
 Linear $$\epsilon-greedy$$ approach:
