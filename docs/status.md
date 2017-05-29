@@ -118,7 +118,7 @@ We chose five metrics to measure our agent performance over training time: mean 
 Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, and quickly begins to choose actions with a higher $$Q$$-value.
 
 
-<img src="pics/meanq.png" alt="alt text" width="50%" height="50%">
+<img src="pics/meanq.png" width="50%" height="60%">
 
 Figure 2: Average chosen $$Q$$ value
 
@@ -127,23 +127,23 @@ From figure 3, the number of actions per episode our agent makes is noisy at bes
 
 
 <br>
-<img src="pics/actions_per_episode.png" alt="alt text" width="50%" height="50%">
+<img src="pics/actions_per_episode.png"  width="50%" height="60%">
 
 Figure 3: Number of actions agent makes per episode.
 
 
 <br>
-<img src="pics/max_reward.png" alt="alt text" width="50%" height="50%">
+<img src="pics/max_reward.png" width="50%" height="60%">
 
 Figure 4: Max rewards per episode.
 
 <br>
-<img src="pics/min_reward.png" alt="alt text" width="50%" height="50%">
+<img src="pics/min_reward.png" width="50%" height="60%">
 
 Figure 5: Min rewards per episode.
 
 <br>
-<img src="pics/reward_per_episod.png" alt="alt text" width="50%" height="50%">
+<img src="pics/reward_per_episod.png" width="50%" height="60%">
 
 Figure 6: Rewards per episode.
 
