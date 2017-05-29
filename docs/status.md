@@ -76,7 +76,7 @@ Since reinforcement learning with a neural network is known to be unstable we us
 that randomly samples the data to remove correlations in the observation sequence. Our temporal memory
 stores $$N$$ previouse samples of the agent's experiences $$(t, t-1, t-2, .. , t-N)$$. During training,
 we use a linear $$\epsilon-greedy$$ approach to offset the exploration/exploitation dilemma. The linear
-$$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a function of the current episode.
+$$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max} \; (=1)$$ to $$\epsilon_{min} \; (=0.1)$$ to linearly anneal $$\epsilon$$ as a function of the current episode.
 
 Since we are working with raw pixel values for Minecraft, we introduce teh function $$\phi$$ which takes $$m = 4$$ most recent frames and scales the RGB frame into an $$84\times84$$ grayscale frame
 
