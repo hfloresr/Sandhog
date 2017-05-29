@@ -117,33 +117,35 @@ We chose five metrics to measure our agent performance over training time: mean 
 
 Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, and quickly begins to choose actions with a higher $$Q$$-value.
 
-
 <img src="pics/meanq.png" width="50%" height="60%">
 
 Figure 2: Average chosen $$Q$$ value
 
 
+<br>
 From figure 3, the number of actions per episode our agent makes is noisy at best. The variability seems to decrease after 2000 episodes, and with perhaps a longer training time it might stabalize to a smaller range of actions.
 
-
-<br>
-<img src="pics/acts_per_episode.png"  width="50%" height="60%">
+<img src="pics/acts_per_episode.png"  width="70%" height="70%">
 
 Figure 3: Number of actions agent makes per episode.
 
 
 <br>
-<img src="pics/max_reward.png" width="50%" height="60%">
+The maximum rewards during training is noisy, but averages around 6.
 
-Figure 4: Max rewards per episode.
+<img src="pics/max_reward.png" width="70%" height="70%">
+
+Figure 4: Max rewards.
 
 <br>
-<img src="pics/min_reward.png" width="50%" height="60%">
+The minimum rewards during training has a periodicty where it's peaks are grouped closely together.
+<img src="pics/min_reward.png" width="70%" height="70%">
 
 Figure 5: Min rewards per episode.
 
 <br>
-<img src="pics/reward_per_episode.png" width="50%" height="60%">
+The total rewards per episode seem to average around zero. Our agent seems to break even in the pig chase challenge.
+<img src="pics/reward_per_episode.png" width="70%" height="70%">
 
 Figure 6: Rewards per episode.
 
