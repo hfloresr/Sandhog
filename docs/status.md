@@ -121,19 +121,22 @@ Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, a
 
 Figure 2: Average chosen $$Q$$ value
 
-
+<br>
 <img src="results/training_actions_per_episode.PNG" alt="alt text" width="50%" height="50%">
 
 Figure 3: Number of actions agent makes per episode.
 
+<br>
 <img src="results/training_max_reward.PNG" alt="alt text" width="50%" height="50%">
 
 Figure 4: Max rewards per episode.
 
+<br>
 <img src="results/training_min_reward.PNG" alt="alt text" width="50%" height="50%">
 
 Figure 5: Min rewards per episode.
 
+<br>
 <img src="results/training_reward_per_episode.PNG" alt="alt text" width="50%" height="50%">
 
 Figure 6: Rewards per episode.
