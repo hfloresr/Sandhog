@@ -83,7 +83,7 @@ stores $$N$$ previouse samples of the agent's experiences $$(t, t-1, t-2, .. , t
 we use a linear $$\epsilon-greedy$$ approach to offset the exploration/exploitation dilemma. The linear
 $$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max} \; (=1)$$ to $$\epsilon_{min} \; (=0.1)$$ to linearly anneal $$\epsilon$$ as a function of the current episode.
 
-Since we are working with raw pixel values for Minecraft, we introduce teh function $$\phi$$ which takes $$m = 4$$ most recent frames and scales the RGB frame into an $$84\times84$$ grayscale frame
+Since we are working with raw pixel values for Minecraft, we introduce the function $$\phi$$ which takes $$m = 4$$ most recent frames and scales the RGB frame into an $$84\times84$$ grayscale frame
 
 The learning algorithm can be described as the following:
   * Initialize temporal memory $$D$$ to capacity $$N$$
@@ -119,7 +119,7 @@ Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, a
 
 <img src="pics/meanq.png" width="75%" height="75%">
 
-<center>Figure 2: Average chosen $$Q$$ value</center>
+<center>Figure 2: Average chosen Q value</center>
 
 
 <br>
