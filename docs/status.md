@@ -117,7 +117,7 @@ We chose five metrics to measure our agent performance over training time: mean 
 
 Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, and quickly begins to choose actions with a higher $$Q$$-value.
 
-<img src="pics/meanq.png" width="75%" height="75%">
+<img src="pics/meanq.png" align="middle" width="75%" height="75%">
 
 <center>Figure 2: Average chosen Q value</center>
 
