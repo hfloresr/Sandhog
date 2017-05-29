@@ -113,29 +113,25 @@ The learning algorithm can be described as the following:
 
 ## Evaluation
 
-Agent2 Episode Mean Q:
+We chose six metrics to measure our agent performance over training time: mean $$Q$$ value, standard deviation $$Q$$ value, actions per episode, max reward per episdoe, min reward per episode, and rewards per episode.
+
+Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, after 2,200 episodes it quickly begins to choose actions with a higher $$Q$$-value. The average $$Q$$ stabalizes around 0.018.
 
 <img src="results/agent2_episode_mean_q.PNG" alt="alt text" width="50%" height="50%">
+Figure 2: Average chosen $$Q$$ value
 
-Agent2 Episode Standard Deviation Q:
-
-<img src="results/agent2_episode_mean_stddev_q.PNG" alt="alt text" width="50%" height="50%">
-
-Training/Actions Per Episode:
 
 <img src="results/training_actions_per_episode.PNG" alt="alt text" width="50%" height="50%">
-
-Training Max Reward:
+Figure 3: Number of actions agent makes per episode.
 
 <img src="results/training_max_reward.PNG" alt="alt text" width="50%" height="50%">
-
-Training Min Reward:
+Figure 4: Max rewards per episode.
 
 <img src="results/training_min_reward.PNG" alt="alt text" width="50%" height="50%">
-
-Training Reward per episode:
+Figure 5: Min rewards per episode.
 
 <img src="results/training_reward_per_episode.PNG" alt="alt text" width="50%" height="50%">
+Figure 6: Rewards per episode.
 
 
 ## Remaining Goals and Challenges
