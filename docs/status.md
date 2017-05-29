@@ -113,31 +113,37 @@ The learning algorithm can be described as the following:
 
 ## Evaluation
 
-We chose six metrics to measure our agent performance over training time: mean $$Q$$ value, standard deviation $$Q$$ value, actions per episode, max reward per episdoe, min reward per episode, and rewards per episode.
+We chose five metrics to measure our agent performance over training time: mean $$Q$$ value,  actions per episode, maximum reward, minimum reward, and rewards per episode.
 
-Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, after 2,200 episodes it quickly begins to choose actions with a higher $$Q$$-value. The average $$Q$$ stabalizes around 0.018.
+Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, and quickly begins to choose actions with a higher $$Q$$-value.
 
-<img src="results/agent2_episode_mean_q.PNG" alt="alt text" width="50%" height="50%">
+
+<img src="pics/meanq.png" alt="alt text" width="50%" height="50%">
 
 Figure 2: Average chosen $$Q$$ value
 
+
+From figure 3, the number of actions per episode our agent makes is noisy at best. The variability seems to decrease after 2000 episodes, and with perhaps a longer training time it might stabalize to a smaller range of actions.
+
+
 <br>
-<img src="results/training_actions_per_episode.PNG" alt="alt text" width="50%" height="50%">
+<img src="pics/actions_per_episode.png" alt="alt text" width="50%" height="50%">
 
 Figure 3: Number of actions agent makes per episode.
 
+
 <br>
-<img src="results/training_max_reward.PNG" alt="alt text" width="50%" height="50%">
+<img src="pics/max_reward.png" alt="alt text" width="50%" height="50%">
 
 Figure 4: Max rewards per episode.
 
 <br>
-<img src="results/training_min_reward.PNG" alt="alt text" width="50%" height="50%">
+<img src="pics/min_reward.png" alt="alt text" width="50%" height="50%">
 
 Figure 5: Min rewards per episode.
 
 <br>
-<img src="results/training_reward_per_episode.PNG" alt="alt text" width="50%" height="50%">
+<img src="pics/reward_per_episod.png" alt="alt text" width="50%" height="50%">
 
 Figure 6: Rewards per episode.
 
