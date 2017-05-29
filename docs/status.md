@@ -143,7 +143,7 @@ Figure 4: Max rewards per episode.
 Figure 5: Min rewards per episode.
 
 <br>
-<img src="pics/reward_per_episod.png" width="50%" height="60%">
+<img src="pics/reward_per_episode.png" width="50%" height="60%">
 
 Figure 6: Rewards per episode.
 
