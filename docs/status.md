@@ -24,7 +24,7 @@ We consider the task in which our agent interacts with the Minecraft environment
 
 A symbolic representation of the state space is shown in figure 1.
 
-Since the agent only observes the current screen, it is impossible for the agent to fully perceive the current situation fom the the current screen $$x_t$$. Therefore, we consider the sequences of actions and observations, $$s_t = x_{1},a_{1},x_{2}, ... , a_{t-1}, x_{t}$$, where $$x_t$$ is is the vector of pixel values that represent the visual input from the agent. The sequences are large but finite, therefore formalizing our finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$.
+Since the agent only observes the current screen, it is impossible for the agent to fully perceive the current situation fom the the current screen $$x_t$$. Therefore, we consider the sequences of actions and observations, $$s_t = x_{1},a_{1},x_{2}, ... , a_{t-1}, x_{t}$$, where $$x_t$$ is the vector of pixel values that represent the visual input from the agent. The sequences are large but finite, therefore formalizing our finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$.
 
 The goal of our agent is to select actions in order to maximize future rewards. With the discount factor of $$\gamma \; (=0.99)$$, our future reward at time $$t$$ is defined as:
 
@@ -40,7 +40,7 @@ To avoid an extremely large Q-table, we used a function approximator to approxim
 
 $$Q(s, a; \theta) \approx Q^{*}(s, a)$$
 
-In this project we used a convolution neural network as a nonlinear function approximator to estimate the action-value $$Q$$ function. The architecture for our neural network is as follows:
+In this project we used a convolution neural network as a nonlinear function approximator to estimate the action-value $$Q$$ function, where $$\theta$$ is our neural network weights.. The architecture for our neural network is as follows:
 
 <br>
 <p align="center">
@@ -60,15 +60,15 @@ $$\begin{array}{|c|c|c|c|c|c|c|}
 </p>
 
 <br>
-The Q-learning update uses the Huber loss function, defined as:
+The $$Q$$-learning update uses the Huber loss function, defined as:
 
-$$L(\theta) =
+$$L(x) =
 \begin{cases}
-\frac{1}{2}{\theta}^2, & \text{if $|\theta| \lt \delta$} \\
-\delta |\theta| - \frac{1}{2}\delta^{2}, & \text{if $|\theta| \geq \delta$}
+\frac{1}{2}{x}^2, & \text{if $|x| \lt \delta$} \\
+\delta |x| - \frac{1}{2}\delta^{2}, & \text{if $|x| \geq \delta$}
 \end{cases}$$
 
-where $$\delta \, (\geq 0)$$ is the outlier threshold parameter. We used stochasitc gradient descent
+where $$\delta \; (= 1)$$ is the outlier threshold parameter. We used stochasitc gradient descent
 to optimize the Huber loss function.
 
 <br>
@@ -76,13 +76,14 @@ Since reinforcement learning with a neural network is known to be unstable we us
 that randomly samples the data to remove correlations in the observation sequence. Our temporal memory
 stores $$N$$ previouse samples of the agent's experiences $$(t, t-1, t-2, .. , t-N)$$. During training,
 we use a linear $$\epsilon-greedy$$ approach to offset the exploration/exploitation dilemma. The linear
-$$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to
-linearly anneal $$\epsilon$$ as a function of the current episode.
+$$\epsilon-greedy$$ approach linearly interpolates between $$\epsilon_{max}$$ to $$\epsilon_{min}$$ to linearly anneal $$\epsilon$$ as a function of the current episode.
+
+Since we are working with raw pixel values for Minecraft, we introduce teh function $$\phi$$ which takes $$m = 4$$ most recent frames and scales the RGB frame into an $$84\times84$$ grayscale frame
 
 The learning algorithm can be described as the following:
   * Initialize temporal memory $$D$$ to capacity $$N$$
   * Initialize action-value function $$Q$$ with random weights $$\theta$$
-  * Initialize target action-value function $$\hat{Q}$$ with weights $$\theta^{-}$$
+  * Initialize target action-value function $$\hat{Q}$$ with weights $$\theta^{-} = \theta$$
   * **For** episode $$= 1, ... , M$$:
       * Initialize sequence $$s_1 = {x_1}$$ and preprocessed sequence $$\phi_1 = \phi(s_1)$$
       * **For** $$t = 1, ..., T$$:
@@ -146,7 +147,7 @@ The challenges posed by these are:
 
 <img src="results/deepqlearn.gif" alt="alt text" width="50%" height="50%">
 
-Full Video: 
+Full Video:
 <iframe src="https://player.vimeo.com/video/219234708" width="640" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/219234708">Deep Q Pig Chase</a> from <a href="https://vimeo.com/user67099619">Hector Flores</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
