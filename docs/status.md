@@ -118,19 +118,24 @@ We chose six metrics to measure our agent performance over training time: mean $
 Figure 2 shows how our agent starts by choosing actions with low $$Q$$-values, after 2,200 episodes it quickly begins to choose actions with a higher $$Q$$-value. The average $$Q$$ stabalizes around 0.018.
 
 <img src="results/agent2_episode_mean_q.PNG" alt="alt text" width="50%" height="50%">
+
 Figure 2: Average chosen $$Q$$ value
 
 
 <img src="results/training_actions_per_episode.PNG" alt="alt text" width="50%" height="50%">
+
 Figure 3: Number of actions agent makes per episode.
 
 <img src="results/training_max_reward.PNG" alt="alt text" width="50%" height="50%">
+
 Figure 4: Max rewards per episode.
 
 <img src="results/training_min_reward.PNG" alt="alt text" width="50%" height="50%">
+
 Figure 5: Min rewards per episode.
 
 <img src="results/training_reward_per_episode.PNG" alt="alt text" width="50%" height="50%">
+
 Figure 6: Rewards per episode.
 
 
