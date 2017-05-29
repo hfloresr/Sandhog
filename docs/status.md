@@ -127,7 +127,7 @@ From figure 3, the number of actions per episode our agent makes is noisy at bes
 
 
 <br>
-<img src="pics/actions_per_episode.png"  width="50%" height="60%">
+<img src="pics/acts_per_episode.png"  width="50%" height="60%">
 
 Figure 3: Number of actions agent makes per episode.
 
