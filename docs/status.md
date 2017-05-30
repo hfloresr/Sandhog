@@ -94,7 +94,8 @@ The learning algorithm can be described as the following:
   * **For** episode $$= 1, ... , M$$:
       * Initialize sequence $$s_1 = {x_1}$$ and preprocessed sequence $$\phi_1 = \phi(s_1)$$
       * **For** $$t = 1, ..., T$$:
-          * Select random action $$a_t$$ with probability $$\epsilon$$
+          * Select random action $$a_t$$ with probability $$\epsilon$$ (anneal \epsilon policy)
+            otherwise select $$a_t = arg\,max{a}Q(\phi(s_t), a; \theta)$$
           * Execute action $$a_t$$ and observe reward $$r_t$$ and frame $$x_{t+1}$$
           * Set $$s_{t+1} = s_{t},a_{t},x_{t+1}$$ and preprocess $$\phi_{t+1} = \phi(s_{t+1})$$
           * $$D$$.append($$\phi_{t}, a_{t}, \phi_{t+1}$$)
