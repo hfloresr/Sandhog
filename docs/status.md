@@ -76,7 +76,7 @@ $$L(x) =
 \delta |x| - \frac{1}{2}\delta^{2}, & \text{if $|x| \geq \delta$}
 \end{cases}$$
 
-where $$\delta \; (= 1)$$ is the outlier threshold parameter. We used stochasitc gradient descen with a learning rate $$\alpha = 0.00025 to optimize the Huber loss function.t
+where $$\delta \; (= 1)$$ is the outlier threshold parameter. We used stochasitc gradient descen with a learning rate $$\alpha = 0.00025$$ to optimize the Huber loss function.t
 
 <br>
 Since reinforcement learning with a neural network is known to be unstable we used experience replay
