@@ -160,3 +160,5 @@ Over the next few weeks, our goals are to:
   * Increase the number of training epochs
   * Run our model against the A* agent
 
+The main challenge we face is having our agent to collaborate with an unknown agent. Since catching the pig is a joint effort, our agent has to be able to be able to determine what the other agent's goals are.
+
