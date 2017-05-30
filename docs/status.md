@@ -60,9 +60,9 @@ $$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
 \text{Convolution 3} & 9\times9\times64 & 3\times3 & 1 & 64 & \text{ReLU} & 7\times7\times64 \\
 \hline
-\text{Dense} & 7\times7\times64& & & 512& \text{ReLU} & 512\\
+\text{Dense 4} & 7\times7\times64& & & 512& \text{ReLU} & 512\\
 \hline
-\text{Dense} & 512& & & & \text{linear} & 3\\
+\text{Dense 5} & 512& & & 3& \text{Linear} & 3\\
 \hline
 \end{array}$$
 </p>
