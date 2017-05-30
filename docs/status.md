@@ -60,7 +60,9 @@ $$\begin{array}{|c|c|c|c|c|c|c|}
 \hline
 \text{Convolution 3} & 9\times9\times64 & 3\times3 & 1 & 64 & \text{ReLU} & 7\times7\times64 \\
 \hline
-\text{Dense} & 512 & & & & & \\
+\text{Dense} & 7\times7\times64& & & 512& \text{ReLU} & 512\\
+\hline
+\text{Dense} & 512& & & & \text{linear} & 3\\
 \hline
 \end{array}$$
 </p>
@@ -74,8 +76,7 @@ $$L(x) =
 \delta |x| - \frac{1}{2}\delta^{2}, & \text{if $|x| \geq \delta$}
 \end{cases}$$
 
-where $$\delta \; (= 1)$$ is the outlier threshold parameter. We used stochasitc gradient descent
-to optimize the Huber loss function.
+where $$\delta \; (= 1)$$ is the outlier threshold parameter. We used stochasitc gradient descen with a learning rate $$\alpha = 0.00025 to optimize the Huber loss function.t
 
 <br>
 Since reinforcement learning with a neural network is known to be unstable we used experience replay
