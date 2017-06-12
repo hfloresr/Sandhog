@@ -6,7 +6,7 @@ title:  Ex Minecraft
 # {{ page.title }}
 
 
-## Amanda Marie Ortscheid
+## Amanda Ortscheid
 ***UCI Net ID***: aortsche
 
 ## Hector G. Flores Rodriguez
