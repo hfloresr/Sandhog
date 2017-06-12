@@ -21,17 +21,19 @@ $$x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}} \in \mathcal{X}^{2}, \; \tex
 
 $$o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}} \in \mathcal{O}, \; \text{where} \; \mathcal{O} = \{North, East, South, West\}$$
 
-We further extend our state space to include the second agent's previous move to make inference on its intentions to collaborate. We therefore formalize our finite Markov Decision Process (MDP) as the following:
-
-$$s_t = \{x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}}, \, o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}}, a_{agent2_{t}}\}
-
-
-as the coordinates for agent and opponent, respectively. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
+The agent also receives a reward $$r_t$$ representing the change in game score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
   * +5 for exiting through a gate
   * +25 for catching the pig
   * -1 for each action
 
 A symbolic representation of the state space is shown in figure 1.
+
+
+We further extend our state space to include the second agent's previous move to make inference on its intentions to collaborate. We therefore formalize our finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$ and defined as the following:
+
+$$s_t = \{x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}}, \, o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}}, a_{agent2_{t}}\}
+
+
 
 ## Evaluation
 
