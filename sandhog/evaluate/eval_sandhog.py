@@ -16,4 +16,4 @@ if __name__ == '__main__':
     builder = PigChaseSymbolicStateBuilder()
     eval = PigChaseEvaluator(clients, agent, agent2, builder)
     eval.run()
-    eval.save('Sandhog_vs_Sandhog', 'pig_chase_results_sandhog.json')
+    eval.save('sandhog_exp', 'sandhog_results.json')

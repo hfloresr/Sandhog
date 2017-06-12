@@ -15,4 +15,4 @@ if __name__ == '__main__':
     agent = FocusedAgent(ENV_AGENT_NAMES[1], ENV_TARGET_NAMES[0])
     eval = PigChaseEvaluator(clients, agent, agent, builder)
     eval.run()
-    eval.save('astar_exp', 'astar_results.json')
+    eval.save('baseline_exp', 'baseline_results.json')

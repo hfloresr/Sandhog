@@ -6,8 +6,8 @@ from evaluation import PigChaseEvaluator
 from malmopy.agent import TemporalMemory, LinearEpsilonGreedyExplorer
 from malmopy.environment.malmo import MalmoALEStateBuilder
 from agent import PigChaseChallengeAgent, PigChaseQLearnerAgent
-from malmopy.model.cntk import QNeuralNetwork
 from malmopy.visualization import ConsoleVisualizer
+from malmopy.model.chainer import QNeuralNetwork, ReducedDQNChain
 
 
 
@@ -17,16 +17,17 @@ if __name__ == '__main__':
     visualizer = ConsoleVisualizer()
 
     clients = [('127.0.0.1', 10000), ('127.0.0.1', 10001)]
-    memory = TemporalMemory(100000, (84, 84))
-
-    model = QNeuralNetwork((memory.history_length, 84, 84), nb_actions, device)
-    explorer = LinearEpsilonGreedyExplorer(1, 0.1, 1000000)
+    memory = TemporalMemory(100000, (18, 18))
+    chain = ReducedDQNChain((memory.history_length, 18, 18), nb_actions)
+    target_chain = ReducedDQNChain((memory.history_length, 18, 18), nb_actions)
+    model = QNeuralNetwork(chain, target_chain, device)
+    explorer = LinearEpsilonGreedyExplorer(0.6, 0.1, 1000000)
     agent = PigChaseQLearnerAgent(ENV_AGENT_NAMES[1], nb_actions,
                                   model, memory, 0.99, 32, 50000,
                                   explorer=explorer, visualizer=visualizer)
 
-    builder = MalmoALEStateBuilder()
+    #builder = MalmoALEStateBuilder()
+    builder = PigChaseTopDownStateBuilder(True)
     eval = PigChaseEvaluator(clients, agent, agent, builder)
     eval.run()
-
-    eval.save('qlearner', 'qlearner_results.json')
+    eval.save('qlearner_exp', 'qlearner_results.json')
