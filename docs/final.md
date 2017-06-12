@@ -16,10 +16,15 @@ We have defined our baseline agent to be one that uses A* to determine the short
 <br>
 We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. Our agent observes the positions and orientations of the pig and second agent relative to its own position, 
 
-$$x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}} \in \mathcal{X}^{2}, \; \text{where} \, \mathcal{X} = \{0, 1, 2, 3, 4, 5, 6\}$$
+$$x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}} \in \mathcal{X}^{2}, \; \text{where} \; \mathcal{X} = \{0, 1, 2, 3, 4, 5, 6\}$$
 
 
-$$o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}} \in \mathcal{O}, \; \text{where} \, \mathcal{O} = \{North, East, South, West\}$$
+$$o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}} \in \mathcal{O}, \; \text{where} \; \mathcal{O} = \{North, East, South, West\}$$
+
+We further extend our state space to include the second agent's previous move to make inference on its intentions to collaborate. We therefore formalize our finite Markov Decision Process (MDP) as the following:
+
+$$s_t = \{x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}}, \, o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}}, a_{agent2_{t}}\}
+
 
 as the coordinates for agent and opponent, respectively. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
   * +5 for exiting through a gate
