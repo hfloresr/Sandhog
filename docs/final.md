@@ -34,9 +34,9 @@ We further extend our state space to include the second agent's previous move to
 $$s_t = \{x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}}, \, o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}}, a_{agent2_{t-1}}\}$$
 
 
-The malmo challange introduces an uncertainity about the actions of agent2 and the pig, which required developing a probabilistic model to infer the objective of agent2. We exclude any inference about the actions the pig might make since all of the pig's actions are random and our primary objective is to collaborate with agent2 to acheive the highest reward possible.
+The malmo challange introduces an uncertainity about the actions of \textit{agent2} and the pig, which required developing a probabilistic model to infer the objective of \textit{agent2}. We exclude any inference about the actions the pig might make since all of the pig's actions are random and our primary objective is to collaborate with \textit{agent2} to acheive the highest reward possible.
 
-To create a collaborative effort between our agent (agent1) and agent2, we based our agent's decisions on the probability of agent2's intentention to help catch the pig.  To describe the intentions of agent2, we define the random variable $$Z = \{Random, Exit, Pig\}$$. We then represent our probability vector, $$\mathbf{p}$$, as our distribution over the random variable $$Z$$,
+To create a collaborative effort between our agent (agent1) and \textit{agent2}, we based our agent's decisions on the probability of \textit{agent2}'s intentention to help catch the pig.  To describe the intentions of \textit{agent2}, we define the random variable $$Z = \{Random, Exit, Pig\}$$. We then represent our probability vector, $$\mathbf{p}$$, as our distribution over the random variable $$Z$$,
 
 $$\mathbf{p} =
 \begin{bmatrix} 
@@ -44,6 +44,10 @@ $$\mathbf{p} =
 \mathbb{P}[Z = Exit] \\
 \mathbb{P}[Z = Pig]
 \end{bmatrix}$$
+
+We assume that \textit{agent2} is an optimal agent, such that it trys to find the shortest path to their goal. At each time step $$t$$, we compute the shortest path to the pig and the two exits via A* search algorithm. We can then estimate \textit{agent2}'s optimal policy for each of the possible intentions.
+
+
 
 ## Evaluation
 
