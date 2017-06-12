@@ -40,9 +40,9 @@ To create a collaborative effort between our agent (agent1) and agent2, we based
 
 $$\mathbf{p} =
 \begin{bmatrix} 
-\mathbb{P}[Random] \\
-\mathbb{P}[Exit] \\
-\mathbb{P}[Pig]
+\mathbb{P}[Z = Random] \\
+\mathbb{P}[Z = Exit] \\
+\mathbb{P}[Z = Pig]
 \end{bmatrix}$$
 
 ## Evaluation
