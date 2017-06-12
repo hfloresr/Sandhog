@@ -36,17 +36,17 @@ state = np.array(
 
 
 def a_star(start, goal, output_states=False):
-    came_from, cost = {}, {}
-    opened_nodes = []
+    parent, cost = {}, {}
+    frontier = []
 
-    heapify(opened_nodes)
-    heappush(opened_nodes, (0, start))
-    came_from[start] = None
+    heapify(frontier)
+    heappush(frontier, (0, start))
+    parent[start] = None
     cost[start] = 0
     current = None
 
-    while len(opened_nodes) > 0:
-        _, current = heappop(opened_nodes)
+    while len(frontier) > 0:
+        _, current = heappop(frontier)
         if current[1] == goal:
             break
         for nb in neighbors(current, state):
@@ -55,8 +55,8 @@ def a_star(start, goal, output_states=False):
             if nb not in cost or new_cost < cost[nb]:
                 cost[nb] = new_cost
                 priority = new_cost + heuristic(goal, nb[1])
-                heappush(opened_nodes, (priority, nb))
-                came_from[nb] = current
+                heappush(frontier, (priority, nb))
+                parent[nb] = current
 
     path = deque()
     c = cost[current]
@@ -65,7 +65,7 @@ def a_star(start, goal, output_states=False):
             path.appendleft(current)
         else:
             path.appendleft(current[2])
-        current = came_from[current]
+        current = parent[current]
 
     return path, c
 
