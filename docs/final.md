@@ -104,7 +104,7 @@ Since we compute the shortest path for all goals and for both agents at each tim
 
 
 
-<img src="pics/final_figs/reward_per_episode" align="middle" width="75%" height="75%">
+<img src="pics/final_figs/reward_per_episode.png" align="middle" width="75%" height="75%">
 
 <center>Figure 2: Rewards per episode.</center>
 
