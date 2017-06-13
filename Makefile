@@ -18,14 +18,14 @@ images:
 
 sandhog:
 	docker build $(SANDIR) -t $(SAND):$(TAG)
-	docker-compose -f $(DIR)/$(SANDIR)/docker-compose.yml up
+	docker-compose -f $(DIR)/$(EXPDIR)/docker-compose.yml up
 
 astar:
-	docker build $(ADIR) -t $(ASTAR):$(TAG)
+	docker build $(SANDIR) -t $(ASTAR):$(TAG)
 	docker-compose -f $(DIR)/$(ADIR)/docker-compose.yml up
 
 random:
-	docker build $(RANDIR) -t $(RAND):$(TAG)
+	docker build $(SANDIR) -t $(RAND):$(TAG)
 	docker-compose -f $(DIR)/$(RANDIR)/docker-compose.yml up
 
 
