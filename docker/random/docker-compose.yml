@@ -1,0 +1,19 @@
+version: '3'
+services:
+  malmo1:
+    image: malmo:latest
+    expose:
+      - "10000"
+  malmo2:
+      image: malmo:latest
+      expose:
+        - "10000"
+  agents:
+      image: sandhog_experiment:latest
+      working_dir: /root/malmo-challenge/ai_challenge/pig_chase
+      command: bash -c "python sandhog_baseline.py malmo1:10000 malmo2:10000 & tensorboard --logdir 'results' --port 6006"
+      ports:
+        - "6006:6006"
+      links:
+        - malmo1
+        - malmo2
