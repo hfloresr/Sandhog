@@ -102,6 +102,31 @@ Since we compute the shortest path for all goals and for both agents at each tim
 
 ## Evaluation
 
+
+
+<img src="pics/final_figs/reward_per_episode" align="middle" width="75%" height="75%">
+
+<center>Figure 2: Rewards per episode.</center>
+
+
+<br>
+
+
+<img src="pics/final_figs/actions_per_episode.png"  width="75%" height="75%">
+
+<center>Figure 3: Number of actions agent makes per episode.</center>
+
+
+<br>
+
+
+<img src="pics/final_figs/train_max_reward.png" width="75%" height="75%">
+
+<center>Figure 4: Max rewards.</center>
+
+<br>
+
+
 ## References
 
 Sutton, Richard S. and Andrew G. Barto. 1998. *Reinforcement Learning: An Introduction.* The MIT Press, Cambridge, MA.
