@@ -9,9 +9,9 @@ services:
       expose:
         - "10000"
   agents:
-      image: astar_experiment:latest
+      image: dqn_experiment:latest
       working_dir: /root/malmo-challenge/ai_challenge/pig_chase
-      command: bash -c "python sandhog_baseline.py -t astar malmo1:10000 malmo2:10000 & tensorboard --logdir 'results' --port 6006"
+      command: bash -c "python qlearner.py -t sandhog malmo1:10000 malmo2:10000 & tensorboard --logdir 'results' --port 6006"
       ports:
         - "6006:6006"
       links:
