@@ -151,6 +151,23 @@ Evidence of the correlation between exploration and rewards are apparent in figu
 <br>
 As expected, our Sandhog* Agent consistently produces the maximum rewards. Also, the Deep-Q Agent slowly starts to increase in maximum rewards, if given enough time. However, the challenge does not provide enough time for our Deep-Q Agent to perform well. 
 
+<br>
+<p align="center">
+$$\begin{array}{|c||c|c|c|c|}
+\hline
+\textbf{Agent} & \textbf{Avg (100k)} & \textbf{Std dev (100k)} &    \textbf{Avg (500k)} & \textbf{Std dev (500k)}\\
+\hline
+\text{Sandhog*} &  0.451096 & 33.401065 & 0 & 0 \\
+\hline
+\text{Deep-Q} & 0 & 0 & 0 & 0 \\
+\hline
+\text{A*} & 0 & 0 & 0 & 0 \\
+\hline
+\text{Random} & 0 & 0 & 0 & 0 \\
+\hline
+\end{array}$$
+</p>
+
 
 ## References
 
