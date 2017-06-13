@@ -123,9 +123,11 @@ To determine how well our agent might perform in the Microssoft challenge, we co
 To compare between all of the agents, we collected three metrics to measure performance over training time: rewards per episode, actions per episode, and maximum rewards. All the figures show our metrics per episode and to avoid a lengthy training time, 450 acttions were considered.
 
 
+
+
 <img src="pics/final_figs2/rewards_per_episode.png" align="middle" width="75%" height="75%">
 
-<center>Figure 2: Rewards per episode.</center>
+<center>Figure 2: Rewards per episode. The colors to agent mapping are: (purple, blue, orange, teal) = (Sandhog* Agent, A* Agent, Deep-Q Agent, Random Agent) </center>
 
 
 <br>
@@ -133,7 +135,7 @@ To compare between all of the agents, we collected three metrics to measure perf
 
 <img src="pics/final_figs2/acts_per_episode.png"  width="75%" height="75%">
 
-<center>Figure 3: Number of actions agent makes per episode.</center>
+<center>Figure 3: Number of actions agent makes per episode. The colors to agent mapping are: (purple, blue, orange, teal) = (Sandhog* Agent, A* Agent, Deep-Q Agent, Random Agent)</center>
 
 
 <br>
@@ -141,7 +143,7 @@ To compare between all of the agents, we collected three metrics to measure perf
 
 <img src="pics/final_figs2/max_reward.png" width="75%" height="75%">
 
-<center>Figure 4: Max rewards.</center>
+<center>Figure 4: Max rewards. The colors to agent mapping are: (purple, blue, orange, teal) = (Sandhog* Agent, A* Agent, Deep-Q Agent, Random Agent)</center>
 
 <br>
 
