@@ -85,7 +85,7 @@ $$\mathbf{p}_{t+1} =
 \end{bmatrix}, & \text{if $Z' = Pig$}\\
 \end{cases}$$
 
-To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach by determining the intentions of *agent2*. At a given time step, $$t$$, we have a probability vector, $$\mathbf{p}_{t}$$ (as defined earlier), that helps estimate the cooperation level of *agent2*. With probability $$1 - \epsilon$$ we determine that *agent2's* intensions is $$Z' = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second high probabilty in $$p_{t}$$. After deciding the intentions of *agent2*, our agent follows a simple strategy that can be described as the following:
+To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach by determining the intentions of *agent2*. At a given time step, $$t$$, we have a probability vector, $$\mathbf{p}_{t}$$ (as defined earlier), that helps estimate the cooperation level of *agent2*. With probability $$1 - \epsilon$$ we determine that *agent2's* intensions is $$Z' = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second high probabilty in $$\mathbf{p}_{t}$$. After deciding the intentions of *agent2*, our agent follows a simple strategy that can be described as the following:
 
     * If agent determines that agent2 is a cooperative agent:
         * If the pig has more than two adjacent positions:
@@ -97,7 +97,7 @@ To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach
         * Go to nearest exit if our agent is closer to it than agent2 to any of the other exits
         * Otherwise, chase the pig
 
-
+Since we compute the shortest path for all goals and for both agents at each time step, our agent can effeciently make the necessary action based on this approach.
 
 ## Evaluation
 
