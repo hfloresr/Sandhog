@@ -58,7 +58,19 @@ Furthermore, we assume that the $$\textit{agent2}$$ is a random agent if all of 
 
 $$Z = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$
 
+Once we have determined $$\textit{agent2}$$'s intent, we can update our probabilities by adding a constant weight, \eta, to the respecitve intent and normalizing, as such
 
+$$\mathbf{p}_{t+1} =
+\begin{cases}
+
+\mathbf{p} =
+\begin{bmatrix} 
+\mathbb{P}[Z = Random] + \eta\\
+\mathbb{P}[Z = Exit] \\
+\mathbb{P}[Z = Pig]
+\end{bmatrix}, & \text{if $Z = Random$}\\
+
+\end{cases}$$
 
 ## Evaluation
 
