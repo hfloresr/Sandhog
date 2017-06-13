@@ -45,9 +45,14 @@ $$\mathbf{p} =
 \mathbb{P}[Z = Pig]
 \end{bmatrix}$$
 
-We assume that $$\textit{agent2}$$ is an optimal agent, such that it trys to find the shortest path to their goal. At each time step $$t$$, we compute the shortest path to the pig and the two exits via A* search algorithm. We can then estimate $$\textit{agent2}$$'s optimal policy for each of the possible intentions.
+We assume that $$\textit{agent2}$$ is an optimal agent, such that it trys to find the shortest path to their goal. At each time step $$t$$, we compute the shortest path to the pig and the two exits via A* search algorithm. We can then estimate $$\textit{agent2}$$'s optimal policy for each of the possible intentions, which is represented as
 
+$$\mathbf{\pi}(s_{t}) = \{\pi_{exit_{t}}, \, \pi_{pig_{t}}\}$$
 
+We store that last two steps so we can infer $$\textit{agent2}$$'s intent by as the conditional probability of $$\pi$$ given the previous states.
+
+$$R_{\pi}
+= \prod_{i=0}^{\n-1} \gamma^i \mathbb{P}[\pi_{exit} \, \lvert \, s_{t-(n-i)}]$$
 
 ## Evaluation
 
