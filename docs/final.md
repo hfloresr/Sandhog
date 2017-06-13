@@ -38,7 +38,7 @@ The malmo challange introduces an uncertainity about the actions of $$\textit{ag
 
 To create a collaborative effort between our agent ($$\textit{agent1}$$) and $$\textit{agent2}$$, we based our agent's decisions on the probability of $$\textit{agent2}$$'s intentention to help catch the pig.  To describe the intentions of $$\textit{agent2}$$, we define the random variable $$Z = \{Random, Exit, Pig\}$$. We then represent our probability vector, $$\mathbf{p}$$, as our distribution over the random variable $$Z$$,
 
-$$\mathbf{p} =
+$$\mathbf{p}_{t} =
 \begin{bmatrix} 
 \mathbb{P}[Z = Random] \\
 \mathbb{P}[Z = Exit] \\
@@ -83,8 +83,9 @@ $$\mathbf{p}_{t+1} =
 \mathbb{P}[Z = Exit] \\
 \mathbb{P}[Z = Pig] + \eta
 \end{bmatrix}, & \text{if $Z = Pig$}\\
-
 \end{cases}$$
+
+To determine a strategy for our agent, we used an $$\eps - greedy$$ approach by determining the intentions of $$agent2$$. At a given time step, $$t$$, we have a probability vector, $$p_{t}$$ (as defined earlier), that helps estimate the cooperation level of \textit{agent2}. With probability $$1 - \eps$$ we determine that $$agent2$$'s intensions is $$Z = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second high probabilty in $$p_{t}$$. After deciding the intentions of $$agent2$$, 
 
 ## Evaluation
 
