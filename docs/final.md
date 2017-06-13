@@ -23,7 +23,7 @@ At each time step, the agent selects an action $$a_t$$ from the action space, $$
 
 #### Observations
 
-The position of all actors (agent1, agent2, and the pig) are defined by (1) a pair of integers representing the actor's position on the game board, a 7x7 grid:
+The position of all actors (agent1, agent2, and the pig) are defined by (1) a pair of integers representing the actor's position on the game board, a $$9 \times 9$$ grid:
 
 $$x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}} \in \mathcal{X}^{2}, \; \text{where} \; \mathcal{X} = \{0, 1, 2, 3, 4, 5, 6\}$$
 
