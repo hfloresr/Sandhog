@@ -118,6 +118,9 @@ Since we compute the shortest path for all goals and for both agents at each tim
 
 ## Evaluation
 
+To determine how well our agent might perform in the Microssoft challenge, we compared our agents with a random agent and an A* agent. The random agent and A* agent used in our experiments were implemented by Microsoft and were used as our baseline. The agents that we implemented were the Deep-Q Agent and the Sandhog* Agent, which are described in detail in our status page and final page respectively. 
+
+To compare between all of the agents, we collected three metrics to measure performance over training time: rewards per episode, actions per episode, and maximum rewards. All the figures show our metrics per episode and to avoid a lengthy training time, 450 acttions were considered.
 
 
 <img src="pics/final_figs2/rewards_per_episode.png" align="middle" width="75%" height="75%">
