@@ -90,8 +90,8 @@ To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach
     * If agent determines that agent2 is a cooperative agent:
         * If the pig has more than two adjacent positions:
             * Go to nearest exit if our agent is closer to it than agent2 to any of the other exits
-            + Otherwise, chase the pig
-        - Else:
+            * Otherwise, chase the pig
+        * Else:
             * Chase the pig
     * Else:
         * Go to nearest exit if our agent is closer to it than agent2 to any of the other exits
