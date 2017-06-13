@@ -15,12 +15,25 @@ We have defined our baseline agent to be one that uses A* to determine the short
 <center>Figure 1: Symbolic view of a possible state.</center>
 
 <br>
-We consider the task in which our agent interacts with the Minecraft environment by making sequence of actions, observations, and receiving rewards. At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. Our agent observes the positions and orientations of the pig and second agent relative to its own position, 
+In this task, our agent interacts with the Minecraft environment by acting, observing, and receiving rewards in sequence. 
+
+#### Actions
+
+At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. 
+
+#### Observations
+
+The position of all actors (agent1, agent2, and the pig) are defined by (1) a pair of integers representing the actor's position on the game board, a 7x7 grid:
 
 $$x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}} \in \mathcal{X}^{2}, \; \text{where} \; \mathcal{X} = \{0, 1, 2, 3, 4, 5, 6\}$$
 
+and (2) the actor's orientation (i.e. which way it is facing):
 
 $$o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}} \in \mathcal{O}, \; \text{where} \; \mathcal{O} = \{North, East, South, West\}$$
+
+Our agent observes the positions and orientations of the pig and second agent relative to its own position. 
+
+#### Rewards
 
 The agent also receives a reward $$r_t$$ representing the change in game score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
   * +5 for exiting through a gate
@@ -29,15 +42,18 @@ The agent also receives a reward $$r_t$$ representing the change in game score. 
 
 A symbolic representation of the state space is shown in figure 1.
 
+#### Formal Definition of the State Space
 
-We further extend our state space to include the second agent's previous move to make inference on its intentions to collaborate. We therefore formalize our finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$ and defined as the following:
+We further extend our state space to include the second agent's previous move, in order to be able to infer whether it intends to collaborate with our agent. 
+
+Therefore, we formalize the definition of our state space as a finite Markov Decision Process (MDP) where the sequence $$s_t$$ is a distinct state at each time $$t$$: 
 
 $$s_t = \{x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}}, \, o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}}, a_{agent2_{t-1}}\}$$
 
 
-The malmo challange introduces an uncertainity about the actions of *agent2* and the pig, which required developing a probabilistic model to infer the objective of *agent2*. We exclude any inference about the actions the pig might make since all of the pig's actions are random and our primary objective is to collaborate with *agent2* to acheive the highest reward possible.
+We cannot be certain that the actions of *agent2* and the pig *directly* map to any sort of "intention." Thus, we developed a *probabilistic* model to relate action to intention. However, this model only infers the objective of *agent2*, because (1) our primary objective is to collaborate with *agent2* to acheive the highest reward possible and (2) we assume that all of the pig's actions are random. 
 
-To create a collaborative effort between our agent (*agent1*) and *agent2*, we based our agent's decisions on the probability of *agent2*'s intentention to help catch the pig.  To describe the intentions of *agent2*, we define the random variable $$Z = \{Random, Exit, Pig\}$$. We then represent our probability vector, $$\mathbf{p}$$, as our distribution over the random variable $$Z$$,
+To create a collaborative effort between our agent (*agent1*) and *agent2*, we based our agent's decisions on the probability that *agent2* intends to help catch the pig.  To describe the intentions of *agent2*, we define the random variable $$Z = \{Random, Exit, Pig\}$$. We then represent our probability vector, $$\mathbf{p}$$, as our distribution over the random variable $$Z$$,
 
 $$\mathbf{p}_{t} =
 \begin{bmatrix} 
