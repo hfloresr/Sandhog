@@ -63,12 +63,23 @@ Once we have determined $$\textit{agent2}$$'s intent, we can update our probabil
 $$\mathbf{p}_{t+1} =
 \begin{cases}
 
-\mathbf{p} =
 \begin{bmatrix} 
 \mathbb{P}[Z = Random] + \eta\\
 \mathbb{P}[Z = Exit] \\
 \mathbb{P}[Z = Pig]
 \end{bmatrix}, & \text{if $Z = Random$}\\
+
+\begin{bmatrix} 
+\mathbb{P}[Z = Random]\\
+\mathbb{P}[Z = Exit] + \eta\\
+\mathbb{P}[Z = Pig]
+\end{bmatrix}, & \text{if $Z = Exit$}\\
+
+\begin{bmatrix} 
+\mathbb{P}[Z = Random] \\
+\mathbb{P}[Z = Exit] \\
+\mathbb{P}[Z = Pig] + \eta
+\end{bmatrix}, & \text{if $Z = Pig$}\\
 
 \end{cases}$$
 
