@@ -153,20 +153,24 @@ As expected, our Sandhog* Agent consistently produces the maximum rewards. Also,
 
 <br>
 <p align="center">
-$$\begin{array}{|c||c|c|c|c|}
+$$\begin{array}{|c||c|c|}
 \hline
-\textbf{Agent} & \textbf{Avg (100k)} & \textbf{Std dev (100k)} &    \textbf{Avg (500k)} & \textbf{Std dev (500k)}\\
+\textbf{Agent} & \textbf{Avg (100k)} & \textbf{Var (100k)} \\
 \hline
-\text{Sandhog*} &  0.451096 & 33.401065 & 0 & 0 \\
+\text{Sandhog*} &  0.940711 & 33.401065  \\
 \hline
-\text{Deep-Q} & 0 & 0 & 0 & 0 \\
+\text{Deep-Q} & -0.893913 & 2.338310  \\
 \hline
-\text{A*} & 0 & 0 & 0 & 0 \\
+\text{A*} & -0.590263 & 10.181000 \\
 \hline
-\text{Random} & 0 & 0 & 0 & 0 \\
+\text{Random} & -0.768211 & 5.343625\\
 \hline
 \end{array}$$
 </p>
+<center>Figure 5: Average rewards and variance over 100 episodes.</center>
+
+<br>
+For the final evaluation, we used Microsoft's evaluation script which outputs a json file displaying the average rewards and the variance over 100 episodes. The script also evaluates the agents at 500K, however we ommited the 500K results since our baseline, Microsoft's A* agent, crashes over 100K on our machines.
 
 
 ## References
