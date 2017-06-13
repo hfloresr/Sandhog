@@ -85,7 +85,7 @@ $$\mathbf{p}_{t+1} =
 \end{bmatrix}, & \text{if $Z = Pig$}\\
 \end{cases}$$
 
-To determine a strategy for our agent, we used an $$\eps - greedy$$ approach by determining the intentions of $$agent2$$. At a given time step, $$t$$, we have a probability vector, $$p_{t}$$ (as defined earlier), that helps estimate the cooperation level of \textit{agent2}. With probability $$1 - \eps$$ we determine that $$agent2$$'s intensions is $$Z = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second high probabilty in $$p_{t}$$. After deciding the intentions of $$agent2$$, 
+To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach by determining the intentions of $$agent2$$. At a given time step, $$t$$, we have a probability vector, $$p_{t}$$ (as defined earlier), that helps estimate the cooperation level of \textit{agent2}. With probability $$1 - \epsilon$$ we determine that $$agent2$$'s intensions is $$Z = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second high probabilty in $$p_{t}$$. After deciding the intentions of $$agent2$$, 
 
 ## Evaluation
 
