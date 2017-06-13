@@ -51,8 +51,8 @@ $$\pi(s_{t}) = \{\pi_{exit_{t}}, \, \pi_{pig_{t}}\}$$
 
 We store that last two steps so we can infer $$\textit{agent2}$$'s intent by as the conditional probability of $$\pi$$ given the previous states. We included a discount factor to give more weight to more recent decisions, the probability is as follows,
 
-$$\mathbb{P}[Z \, \lvert \, \pi]
-= \prod_{i=0}^{n-1} \gamma^i \mathbb{P}[\pi \, \lvert \, s_{t-(n-i)}]$$
+$$\mathbb{P}[Z \, \lvert \, p]
+= \prod_{i=0}^{n-1} \gamma^i \mathbb{P}[p \, \lvert \, s_{t-(n-i)}], \; \forall p \in \pi$$
 
 Furthermore, we assume that the $$\textit{agent2}$$ is a random agent if all of the probabilities are equal. Since we are assuming that $$\textit{agent2}$$ acheives its goals via shortest path, then we can extract $$\textit{agent2}$$'s intent by maximizing over the conditional probabilities:
 
