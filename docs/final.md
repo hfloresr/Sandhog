@@ -51,12 +51,12 @@ $$\pi(s_{t}) = \{\pi_{exit_{t}}, \, \pi_{pig_{t}}\}$$
 
 We store that last two steps so we can infer $$\textit{agent2}$$'s intent by as the conditional probability of $$\pi$$ given the previous states. We included a discount factor to give more weight to more recent decisions, the probability is as follows,
 
-$$\matbb{P}[Z \, \lvert \, \pi]
+$$\mathbb{P}[Z \, \lvert \, \pi]
 = \prod_{i=0}^{n-1} \gamma^i \mathbb{P}[\pi \, \lvert \, s_{t-(n-i)}]$$
 
 Furthermore, we assume that the $$\textit{agent2}$$ is a random agent if all of the probabilities are equal. Otherwise, we can estimate $$\textit{agent2}$$'s intent by,
 
-$$Z = arg\,\min_{x \in \pi} \matbb{P}[Z \, \lvert \, x]$$
+$$Z = arg\,\min_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$
 
 ## Evaluation
 
