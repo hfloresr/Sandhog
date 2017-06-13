@@ -56,7 +56,7 @@ $$\mathbb{P}[Z \, \lvert \, p]
 
 Furthermore, we assume that the $$\textit{agent2}$$ is a random agent if all of the probabilities are equal. Since we are assuming that $$\textit{agent2}$$ acheives its goals via shortest path, then we can extract $$\textit{agent2}$$'s intent by maximizing over the conditional probabilities:
 
-$$Z = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$
+$$Z' = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$
 
 Once we have determined $$\textit{agent2}$$'s intent, we can update our probabilities by adding a constant weight, $$\eta$$, to the respecitve intent and normalizing by $$\alpha$$, as such
 
@@ -68,24 +68,25 @@ $$\mathbf{p}_{t+1} =
 \mathbb{P}[Z = Random] + \eta\\
 \mathbb{P}[Z = Exit] \\
 \mathbb{P}[Z = Pig]
-\end{bmatrix}, & \text{if $Z = Random$}\\
+\end{bmatrix}, & \text{if $Z' = Random$}\\
 
 \alpha \cdot
 \begin{bmatrix} 
 \mathbb{P}[Z = Random]\\
 \mathbb{P}[Z = Exit] + \eta\\
 \mathbb{P}[Z = Pig]
-\end{bmatrix}, & \text{if $Z = Exit$}\\
+\end{bmatrix}, & \text{if $Z' = Exit$}\\
 
 \alpha \cdot
 \begin{bmatrix} 
 \mathbb{P}[Z = Random] \\
 \mathbb{P}[Z = Exit] \\
 \mathbb{P}[Z = Pig] + \eta
-\end{bmatrix}, & \text{if $Z = Pig$}\\
+\end{bmatrix}, & \text{if $Z' = Pig$}\\
 \end{cases}$$
 
-To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach by determining the intentions of $$agent2$$. At a given time step, $$t$$, we have a probability vector, $$p_{t}$$ (as defined earlier), that helps estimate the cooperation level of \textit{agent2}. With probability $$1 - \epsilon$$ we determine that $$agent2$$'s intensions is $$Z = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second high probabilty in $$p_{t}$$. After deciding the intentions of $$agent2$$, 
+To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach by determining the intentions of *agent2*. At a given time step, $$t$$, we have a probability vector, $$p_{t}$$ (as defined earlier), that helps estimate the cooperation level of *agent2*. With probability $$1 - \epsilon$$ we determine that *agent2's* intensions is $$Z' = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second high probabilty in $$p_{t}$$. After deciding the intentions of *agent2*, our agent follows a simple strategy that can be described as the following:
+
 
 ## Evaluation
 
