@@ -11,7 +11,7 @@ title: Final Report
 
 The goal of our project is to design and implement a learning algorithm that trains an agent to collaborate with another (human or AI) agent to catch a pig in Minecraft according to the rules of [The Malmo Collaborative AI Challenge](https://www.microsoft.com/en-us/research/academic-program/collaborative-ai-challenge/# "Challenge Homepage"). 
 
-There are several aspects of this problem that make it difficult to solve without using AI&mdash;and difficult to solve using AI! First of all, it is well-suited to being described as a Markov Decision Process (MDP), which we know we can find an optimal policy for. However, the state space is very complex, so finding an optimal solution isn't actually feasible. 
+There are several aspects of this problem that make it difficult to solve without using AI&mdash;and difficult to solve using AI! First of all, it is well-suited to being represented as a Markov Decision Process (MDP), which we know we can find an optimal policy for. However, the state space is very complex, so finding an optimal solution isn't actually feasible. 
 
 Why is the state space so complex? There are several reasons. 
 * The agents must work together to catch the pig, because it can only be caught when its path is blocked on all four sides: by the two agents and two fence blocks. This means our agent has to somehow take into account the decisions of the other agent.
