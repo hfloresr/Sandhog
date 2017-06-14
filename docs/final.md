@@ -20,23 +20,23 @@ Why is the state space so complex? There are several reasons.
 
 ## Approaches
 
-#### Baseline Agents
+### Baseline Agents
 
 We work from two baseline agents, both provided by the organizers of the competition. The first baseline agent uses A\* to determine the shortest distance to aid in capturing the pig. The second is random.
 
-#### Our Approaches
+### Our Approaches
 
 At first, we used a deep reinforcement learning approach, which is described in detail in our [status report](https://hfloresr.github.io/Sandhog/status.html). However, this approach was not well-suited to the problem because in the pig chase game, the immediate rewards drop off quickly and significantly. Our improved approach, the Sandhog\* agent, described below, uses A\*. It improves on Microsoft's A\* algorithm by taking into account the probability that the second agent will collaborate with our agent. This approach allows for more collaboration with the other agent.
 
-##### Sandhog\*
+#### Sandhog\*
 
 The Sandhog\* agent interacts with the Minecraft world through acting, observing, and receiving rewards.
 
-##### Actions
+#### Actions
 
 At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. 
 
-##### Observations
+#### Observations
 
 The position of all actors (agent1, agent2, and the pig) are defined by (1) a pair of integers representing the actor's position on the game board, a $$9 \times 9$$ grid:
 
@@ -48,7 +48,7 @@ $$o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}} \in \mathcal{O}, \; \text{wh
 
 Our agent observes the positions and orientations of the pig and second agent relative to its own position. 
 
-##### Rewards
+#### Rewards
 
 The agent also receives a reward $$r_t$$ representing the change in game score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
   * +5 for exiting through a gate
@@ -57,7 +57,7 @@ The agent also receives a reward $$r_t$$ representing the change in game score. 
 
 A symbolic representation of the state space is shown in figure 1.
 
-##### Formal Definition of the State Space
+#### Formal Definition of the State Space
 
 We further extend our state space to include the second agent's previous move, in order to be able to infer whether it intends to collaborate with our agent. 
 
