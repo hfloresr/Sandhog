@@ -81,7 +81,7 @@ We assume that *agent2* is an optimal agent, such that it trys to find the short
 
 $$\pi(s_{t}) = \{\pi_{exit_{t}}, \, \pi_{pig_{t}}\}$$
 
-We store that last two steps so we can infer *agent2*'s intent by as the conditional probability of $$\pi$$ given the previous states. We included a discount factor to give more weight to more recent decisions, the probability is as follows,
+We store that last two steps so we can infer *agent2*'s intent by as the conditional probability of $$\pi$$ given the previous states. We included a discount factor, $$\gamma$$, to give more weight to more recent decisions, the probability is as follows,
 
 $$\mathbb{P}[Z \, \lvert \, p]
 = \prod_{i=0}^{n-1} \gamma^i \mathbb{P}[p \, \lvert \, s_{t-(n-i)}], \; \forall p \in \pi$$
@@ -116,6 +116,11 @@ $$\mathbf{p}_{t+1} =
 \mathbb{P}[Z = Pig] + \eta
 \end{bmatrix}, & \text{if $Z' = Pig$}\\
 \end{cases}$$
+
+Where our normalization factor, $$\alpha$$, is the added weight, $$\eta$$, plus the total probability:
+
+$$\alpha = \eta +  $$\sum_{x \in Z} \mathbb{P}[x]$$ 
+
 
 To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach by determining the intentions of *agent2*. At a given time step, $$t$$, we have a probability vector, $$\mathbf{p}_{t}$$ (as defined earlier), that helps estimate the cooperation level of *agent2*. With probability $$1 - \epsilon$$ we determine that *agent2's* intensions is $$Z' = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second highest probabilty in $$\mathbf{p}_{t}$$. After deciding the intentions of *agent2*, our agent follows a simple strategy that can be described as the following:
 
