@@ -194,7 +194,7 @@ For the final evaluation, we used Microsoft's evaluation script which outputs a 
 
 Some future improvements can be made to try to improve the variance of our agent. Furthermore, we can consider trying to learn an intitial strategy from the computed probabilities during each episode. Although there has been many advancements in the field of reinforcement learning, we have shown that a classical A.I. approach can be a strong competitor. The main drawbacks to our initial approach with deep reinforcement learning are that it did not model the dynamics of the challenge well and did not involve the other agents, along with their rewards, in our environment. Our initial formalization of our MDP only took into account the actions and rewards of our Deep-Q agent. This lead to a very noisy situation where the goals of the two agents were not well aligned.
 
-In conclusion, we present a possible approach to the collaborative problem presented by the Microsoft malmo challenge. We modelled the uncertainty of the second agent for a more collaborative approach in a dynamic multiagent environment. Finally, we have shown that our final approach is strong and competitive enough for the competition. 
+In conclusion, we present a possible approach to the collaborative problem presented by the Microsoft malmo challenge. We modelled the uncertainty of the second agent for a more collaborative approach in a dynamic multi-agent environment. Finally, we have shown that our final approach is strong and competitive enough for the competition. 
 
 
 ## References
