@@ -119,7 +119,7 @@ $$\mathbf{p}_{t+1} =
 
 Where our normalization factor, $$\alpha$$, is the added weight, $$\eta$$, plus the total probability:
 
-$$\alpha = \eta +  \sum_{x \in Z} \mathbb{P}[x]$$ 
+$$\alpha = \frac{1}{\eta +  \sum_{x \in Z} \mathbb{P}[x]}$$ 
 
 
 To determine a strategy for our agent, we used an $$\epsilon - greedy$$ approach by determining the intentions of *agent2*. At a given time step, $$t$$, we have a probability vector, $$\mathbf{p}_{t}$$ (as defined earlier), that helps estimate the cooperation level of *agent2*. With probability $$1 - \epsilon$$ we determine that *agent2's* intensions is $$Z' = arg\,max_{x \in \pi} \mathbb{P}[Z \, \lvert \, x]$$. Otherwise, we choose the second highest probabilty in $$\mathbf{p}_{t}$$. After deciding the intentions of *agent2*, our agent follows a simple strategy that can be described as the following:
