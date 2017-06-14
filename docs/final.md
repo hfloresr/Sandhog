@@ -6,22 +6,42 @@ title: Final Report
 <iframe src="https://player.vimeo.com/video/221383197" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Project Summary
-The focus of our project is to design and implement a learning algorithm that trains an agent to collaborate with another (human or non-human) agent to catch a pig in Minecraft according to the rules of [The Malmo Collaborative AI Challenge](https://www.microsoft.com/en-us/research/academic-program/collaborative-ai-challenge/# "Challenge Homepage").
+<img src="results/state_space.PNG" alt="alt text" width="35%" height="35%"> <img src="results/labels.png" alt="alt text" width="20%" height="20%">
+<center>Figure 1: Symbolic view of the game.</center>
 
-We have defined our baseline agent to be one that uses A* to determine the shortest distance to aid in capturing the pig. We aim to improve our baseline by using well known techniques in reinforcment learning, machine learning, and classical artificial intelligence.
+The goal of our project is to design and implement a learning algorithm that trains an agent to collaborate with another (human or AI) agent to catch a pig in Minecraft according to the rules of [The Malmo Collaborative AI Challenge](https://www.microsoft.com/en-us/research/academic-program/collaborative-ai-challenge/# "Challenge Homepage"). 
+
+There are several aspects of this problem that make it difficult to solve without using AI&mdash;and difficult to solve using AI! First of all, it is well-suited to being described as a Markov Decision Process (MDP), which we know we can find an optimal policy for. However, the state space is very complex, so finding an optimal solution isn't actually feasible. 
+
+Why is the state space so complex? There are several reasons. 
+* The agents must work together to catch the pig, because it can only be caught when its path is blocked on all four sides: by the two agents and two fence blocks. This means our agent has to somehow take into account the decisions of the other agent.
+* Only 23 of the squares on the 81-square board are viable positions for an agent to occupy in the game, but which way the agent is turned matters. And taking into account which way an agent is turned makes 23 into 4^23!
 
 ## Approaches
-<img src="results/state_space.PNG" alt="alt text" width="35%" height="35%"> <img src="results/labels.png" alt="alt text" width="20%" height="20%">
-<center>Figure 1: Symbolic view of a possible state.</center>
 
-<br>
-In this task, our agent interacts with the Minecraft environment by acting, observing, and receiving rewards in sequence. 
+We work from two baseline agents, both provided by the organizers of the competition. 
 
-#### Actions
+#### Baseline Agents
+
+##### A\* Agent
+
+The first baseline agent uses A\* to determine the shortest distance to aid in capturing the pig. 
+
+##### Random Agent
+
+The random agent makes decision randomly. 
+
+#### Our Approaches
+
+##### Deep Q-Learning
+
+##### Sandhog\*
+
+##### Actions
 
 At each time step, the agent selects an action $$a_t$$ from the action space, $$\mathcal{A} = \{turn left, turn right, step forward\}$$. 
 
-#### Observations
+##### Observations
 
 The position of all actors (agent1, agent2, and the pig) are defined by (1) a pair of integers representing the actor's position on the game board, a $$9 \times 9$$ grid:
 
@@ -33,7 +53,7 @@ $$o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}} \in \mathcal{O}, \; \text{wh
 
 Our agent observes the positions and orientations of the pig and second agent relative to its own position. 
 
-#### Rewards
+##### Rewards
 
 The agent also receives a reward $$r_t$$ representing the change in game score. Although the game score depends on the previous sequence of actions and observations, immediate rewards are described as:
   * +5 for exiting through a gate
@@ -42,7 +62,7 @@ The agent also receives a reward $$r_t$$ representing the change in game score. 
 
 A symbolic representation of the state space is shown in figure 1.
 
-#### Formal Definition of the State Space
+##### Formal Definition of the State Space
 
 We further extend our state space to include the second agent's previous move, in order to be able to infer whether it intends to collaborate with our agent. 
 
