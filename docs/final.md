@@ -133,9 +133,9 @@ Since we compute the shortest path for all goals and for both agents at each tim
 
 ## Evaluation
 
-To determine how well our agent might perform in the Microssoft challenge, we compared our agents with a random agent and an A* agent. The random agent and A* agent used in our experiments were implemented by Microsoft and were used as our baseline. The agents that we implemented were the Deep-Q Agent and the Sandhog* Agent, which are described in detail in our status page and final page respectively. 
+To determine how well our agent might perform in the Microssoft challenge, we compared our agents with a random agent and an A\* agent. The random agent and A\* agent used in our experiments were implemented by Microsoft and were used as our baseline. The agents that we implemented were the Deep-Q Agent and the Sandhog\* Agent, which are described in detail in our status page and final page respectively. 
 
-To compare between all of the agents, we collected three metrics to measure performance over training time: rewards per episode, actions per episode, and maximum rewards. All the figures show our metrics per episode and to avoid a lengthy training time, 450 actions were considered.
+To compare between all of the agents, we collected three metrics to measure performance over training time: rewards per episode, actions per episode, and maximum rewards. All the figures show our metrics per episode. To avoid a lengthy training time, only 450 actions were considered.
 
 
 
@@ -146,7 +146,7 @@ To compare between all of the agents, we collected three metrics to measure perf
 
 
 <br>
-On average, our Sandhog* Agent performed reasonably well in comparison to all other agents. The ability to make decisions on the probability of whether the other agent is cooperative is an upgraded heuristic to the vanilla A* Agent. Furthermore, we believe that in pig challenge situation, the Deep-Q Agent is at a disadvantage. Since rewards are cummulative between the two agents, negative rewards can accumulate significantly and rapidly due to the penalization of turns and steps. Therefore, making it difficult for our Deep-Q agent to learn in a short period of time along with significant drops in rewards for any exploration.
+On average, our Sandhog\* Agent performed reasonably well in comparison to all other agents. The ability to make decisions on the probability of whether the other agent is cooperative is an upgraded heuristic to the vanilla A\* Agent. Furthermore, we believe that in pig challenge situation, the Deep-Q Agent is at a disadvantage. Since rewards are cumulative between the two agents, negative rewards can accumulate significantly and rapidly due to the penalization of turns and steps. This makes it difficult for our Deep-Q agent to learn in a short period of time along with significant drops in rewards for any exploration.
 
 <br>
 <img src="pics/final_figs2/acts_per_episode.png"  width="75%" height="75%">
@@ -164,7 +164,7 @@ Evidence of the correlation between exploration and rewards are apparent in figu
 
 
 <br>
-As expected, our Sandhog* Agent consistently produces the maximum rewards. Also, the Deep-Q Agent slowly starts to increase in maximum rewards, if given enough time. However, the challenge does not provide enough time for our Deep-Q Agent to perform well. 
+As expected, our Sandhog\* Agent consistently produces the maximum rewards. Also, the Deep-Q Agent slowly starts to increase in maximum rewards, if given enough time. However, the challenge does not provide enough time for our Deep-Q Agent to perform well. 
 
 <br>
 <p align="center">
@@ -185,7 +185,7 @@ $$\begin{array}{|c||c|c|}
 <center>Figure 5: Average rewards and variance over 100 episodes.</center>
 
 <br>
-For the final evaluation, we used Microsoft's evaluation script which outputs a json file displaying the average rewards and the variance over 100 episodes. The script also evaluates the agents at 500K, however we ommited the 500K results since our baseline, Microsoft's A* agent, crashes over 100K on our machines.
+For the final evaluation, we used Microsoft's evaluation script which outputs a json file displaying the average rewards and the variance over 100 episodes. The script also evaluates the agents at 500K, however we omitted the 500K results since our baseline, Microsoft's A\* agent, crashes over 100K on our machines.
 
 
 ## References
