@@ -16,7 +16,7 @@ There are several aspects of this problem that make it difficult to solve withou
 
 Why is the state space so complex? There are several reasons. 
 * The agents must work together to catch the pig, because it can only be caught when its path is blocked on all four sides: by the two agents and two fence blocks. This means our agent has to somehow take into account the decisions of the other agent.
-* Only 23 of the squares on the 81-square board are viable positions for an agent to occupy in the game, but which way the agent is turned matters. And taking into account which way an agent is turned makes 23 into 4^23!
+* Only 23 of the squares on the 81-square board are viable positions for an agent to occupy in the game, but which way the agent is turned matters. And taking into account which way an agent is turned makes 23 into $$4^{23}$$!
 
 ## Approaches
 
@@ -185,9 +185,21 @@ $$\begin{array}{|c||c|c|}
 <center>Figure 5: Average rewards and variance over 100 episodes.</center>
 
 <br>
-For the final evaluation, we used Microsoft's evaluation script which outputs a json file displaying the average rewards and the variance over 100 episodes. The script also evaluates the agents at 500K, however we omitted the 500K results since our baseline, Microsoft's A\* agent, crashes over 100K on our machines.
+For the final evaluation, we used Microsoft's evaluation script which outputs a json file displaying the average rewards and the variance over 100 episodes. The script also evaluates the agents at 500K, however we omitted the 500K results since our baseline, Microsoft's A\* agent, crashes over 100K on our machines. Our Sandhog\* Agent outperforms our baseline agents along with our initially proposed agent, Deep-Q Agent. The overall variability is quite high, however from our training results, there is some indication that this variance decreases over time. 
+
+Some future improvements can be made to try to improve the variance of our agent. Furthermore, we can consider trying to learn an intitial strategy from the computed probabilities during each episode. Although there has been many advancements in the field of reinforcement learning, we have shown that a classical A.I. approach can be a strong competitor. The main drawbacks to our initial approach with deep reinforcement learning are that it did not model the dynamics of the challenge well and did not involve the other agents, along with their rewards, in our environment. Our initial formalization of our MDP only took into account the actions and rewards of our Deep-Q agent. This lead to a very noisy situation where the goals of the two agents were not well aligned.
+
+In conclusion, we present a possible approach to the collaborative problem presented by the Microsoft malmo challenge. We modelled the uncertainty of the second agent for a more collaborative approach in a dynamic multiagent environment. Finally, we have shown that our final approach is strong and competitive enough for the competition. 
 
 
 ## References
 
 Sutton, Richard S. and Andrew G. Barto. 1998. *Reinforcement Learning: An Introduction.* The MIT Press, Cambridge, MA.
+
+Szepesvari, Csaba. 2010. *Algorithms for Reinforcement Learning*. Morgan & Claypool.
+
+Mnih, Volodymyr; Kavukcuoglu, Koray; Silver, David; Graves, Alex; Antonoglou, Ioannis; Wirstra, Daan; Riedmiller, Martin. *Playing Atari with Deep Reinforcement Learning*, December 2013.
+
+Johnson M., K., Hutton T., Bignell D. (2016) The Malmo Platform for Artificial Intelligence Experimentation. Proc. 25th International Joint Converence on Artificial Intelligence, ed. Kambhampati S., p. 4246. AAAI Press, Palo Alto, California USA. https://github.com/Microsoft/malmo.
+
+
