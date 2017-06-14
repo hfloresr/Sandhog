@@ -42,7 +42,7 @@ The position of all actors (agent1, agent2, and the pig) are defined by (1) a pa
 
 $$x_{agent1_{t}}, \, x_{agent2_{t}}, \, x_{pig_{t}} \in \mathcal{X}^{2}, \; \text{where} \; \mathcal{X} = \{0, 1, 2, 3, 4, 5, 6\}$$
 
-(We exclude unreachable positions outside the fenced pigsty) and (2) the actor's orientation (i.e. which way it is facing):
+excluding unreachable positions outside the fenced pigsty and (2) the actor's orientation (i.e. which way it is facing):
 
 $$o_{agent1_{t}}, \, o_{agent2_{t}}, \, o_{pig_{t}} \in \mathcal{O}, \; \text{where} \; \mathcal{O} = \{North, East, South, West\}$$
 
