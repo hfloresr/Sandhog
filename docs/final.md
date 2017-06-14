@@ -20,23 +20,17 @@ Why is the state space so complex? There are several reasons.
 
 ## Approaches
 
-We work from two baseline agents, both provided by the organizers of the competition. 
-
 #### Baseline Agents
 
-##### A\* Agent
-
-The first baseline agent uses A\* to determine the shortest distance to aid in capturing the pig. 
-
-##### Random Agent
-
-The random agent makes decision randomly. 
+We work from two baseline agents, both provided by the organizers of the competition. The first baseline agent uses A\* to determine the shortest distance to aid in capturing the pig. The second is random.
 
 #### Our Approaches
 
-##### Deep Q-Learning
+At first, we used a deep reinforcement learning approach, which is described in detail in our [status report](https://hfloresr.github.io/Sandhog/status.md). However, this approach was not well-suited to the problem because in the pig chase game, the immediate rewards drop off quickly and significantly. Our improved approach, the Sandhog\* agent, described below, uses A\*. It improves on Microsoft's A\* algorithm by taking as input the probability that the second agent with collaborate with our agent. 
 
 ##### Sandhog\*
+
+The Sandhog\* agent interacts with the Minecraft world through acting, observing, and receiving rewards.
 
 ##### Actions
 
